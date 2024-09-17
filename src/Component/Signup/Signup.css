@@ -1,0 +1,100 @@
+
+.signup-container {
+    width: 1920px;
+    height: 1080px;
+    position: relative;
+    background: white;
+}
+
+.back-button {
+    left: 352px;
+    top: 196px;
+    position: absolute;
+    color: black;
+    font-size: 40px;
+    font-family: 'Karla', sans-serif;
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+.sign-up-button {
+    width: 390px;
+    padding: 23px 127px;
+    left: 765px;
+    top: 783px;
+    position: absolute;
+    background: #469707;
+    border-radius: 30px;
+    overflow: hidden;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sign-up-button-text {
+    text-align: center;
+    color: white;
+    font-size: 36px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 900;
+    word-wrap: break-word;
+}
+
+.input-field {
+    width: 800px;
+    height: 100px;
+    position: absolute;
+    background: #D9D9D9;
+    border-radius: 30px;
+}
+
+.input-field-username {
+    left: 560px;
+    top: 274px;
+}
+
+.input-field-password {
+    left: 560px;
+    top: 445px;
+}
+
+.input-field-reenter {
+    left: 560px;
+    top: 617px;
+}
+
+.label-username {
+    left: 582px;
+    top: 233px;
+    position: absolute;
+    color: black;
+    font-size: 24px;
+    font-family: 'Inter', sans-serif;
+    font-style: italic;
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+.label-password {
+    left: 582px;
+    top: 395px;
+    position: absolute;
+    color: black;
+    font-size: 24px;
+    font-family: 'Inter', sans-serif;
+    font-style: italic;
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+.label-reenter {
+    left: 582px;
+    top: 571px;
+    position: absolute;
+    color: black;
+    font-size: 24px;
+    font-family: 'Inter', sans-serif;
+    font-style: italic;
+    font-weight: 400;
+    word-wrap: break-word;
+}
