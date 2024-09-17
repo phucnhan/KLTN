@@ -1,0 +1,77 @@
+.container {
+    width: 1920px;
+    height: 1080px;
+    position: relative;
+    background: white;
+}
+
+.back-button {
+    left: 352px;
+    top: 196px;
+    position: absolute;
+    color: black;
+    font-size: 40px;
+    font-family: 'Karla', sans-serif;
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+.login-button {
+    width: 390px;
+    padding-top: 23px;
+    padding-bottom: 23px;
+    left: 765px;
+    top: 783px;
+    position: absolute;
+    background: #469707;
+    border-radius: 30px;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+    text-align: center;
+    color: white;
+    font-size: 36px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 900;
+    word-wrap: break-word;
+}
+
+.input-box {
+    width: 800px;
+    height: 100px;
+    position: absolute;
+    background: #D9D9D9;
+    border-radius: 30px;
+}
+
+.input-box.username {
+    left: 560px;
+    top: 364px;
+}
+
+.input-box.password {
+    left: 560px;
+    top: 535px;
+}
+
+.label {
+    position: absolute;
+    color: black;
+    font-size: 24px;
+    font-family: 'Inter', sans-serif;
+    font-style: italic;
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+.label.username-label {
+    left: 582px;
+    top: 323px;
+}
+
+.label.password-label {
+    left: 582px;
+    top: 485px;
+}
+
