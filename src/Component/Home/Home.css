@@ -1,0 +1,144 @@
+.home-container {
+    width: 1920px;
+    height: 2000px;
+    position: relative;
+    background: white;
+}
+
+.submit-button {
+    width: 224px;
+    height: 59px;
+    padding: 20px 76px 20px 84px;
+    position: absolute;
+    left: 848px;
+    top: 1720px;
+    background: #469707;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.submit-text {
+    color: white;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    font-style: italic;
+    font-weight: 900;
+    word-wrap: break-word;
+}
+
+.email-box {
+    width: 305px;
+    height: 48px;
+    position: absolute;
+    left: 808px;
+    top: 1639px;
+    background: #D9D9D9;
+}
+
+.email-text {
+    width: 161px;
+    height: 23px;
+    position: absolute;
+    left: 880px;
+    top: 1651px;
+    color: #494949;
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    word-wrap: break-word;
+}
+
+.feedback-box {
+    width: 305px;
+    height: 48px;
+    position: absolute;
+    left: 808px;
+    top: 1567px;
+    background: #D9D9D9;
+}
+
+.feedback-text {
+    position: absolute;
+    left: 866px;
+    top: 1579px;
+    color: #494949;
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    word-wrap: break-word;
+}
+
+.image1, .image2, .image3 {
+    width: 600px;
+    height: 401px;
+    position: absolute;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.image1 {
+    left: 13px;
+    top: 1056px;
+}
+
+.image2 {
+    left: 660px;
+    top: 1059px;
+}
+
+.image3 {
+    left: 1308px;
+    top: 1056px;
+}
+
+.start-now-button {
+    height: 144px;
+    padding: 48px 74px;
+    position: absolute;
+    left: 789px;
+    top: 701px;
+    background: #469707;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.start-now-text {
+    color: white;
+    font-size: 40px;
+    font-family: 'Inter', sans-serif;
+    font-style: italic;
+    font-weight: 900;
+    word-wrap: break-word;
+}
+
+.description-text {
+    width: 680px;
+    height: 100px;
+    position: absolute;
+    left: 620px;
+    top: 521px;
+    text-align: center;
+    color: black;
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+    font-style: italic;
+    font-weight: 500;
+    word-wrap: break-word;
+}
+
+.headline-text {
+    width: 698px;
+    height: 95px;
+    position: absolute;
+    left: 611px;
+    top: 328px;
+    text-align: center;
+    color: black;
+    font-size: 40px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 900;
+    word-wrap: break-word;
+}
