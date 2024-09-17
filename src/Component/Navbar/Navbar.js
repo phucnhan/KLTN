@@ -8,7 +8,7 @@ class Navbar extends React.Component {
                 <div className="navbar-item login">Login</div>
                 <div className="navbar-item contact">Contact</div>
                 <div className="navbar-item about-us">About Us</div>
-                <img className="logo" src="image/logo.png" alt="Logo" />
+                <img className="navbar-logo" src="image/logo.png" alt="Logo" />
             </div>
         );
     }

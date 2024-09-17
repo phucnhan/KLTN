@@ -1,43 +1,35 @@
 .navbar-container {
-    width: 1920px;
-    height: 175px;
+    width: 100vw; /* Full chiều ngang màn hình */
+    height: 10vh; /* Chiều cao tùy chỉnh theo phần trăm chiều cao của màn hình */
+    position: fixed; /* Cố định navbar khi cuộn trang */
+    top: 0;
     left: 0;
-    top: 1px;
-    position: absolute;
     background: black;
+    z-index: 1001; /* Đảm bảo navbar luôn nổi trên các phần tử khác */
+    display: flex; /* Sử dụng flexbox để sắp xếp các mục trong navbar */
+    flex-direction: row-reverse; /* Sắp xếp các mục từ trái sang phải */
+    justify-content: space-around; /* Khoảng cách đều giữa các mục */
+    align-items: center; /* Căn giữa các mục theo chiều dọc */
+    align-content: space-around;
+    padding: 0 2vw; /* Khoảng cách hai bên */
 }
 
 .navbar-item {
-    width: 130px;
-    height: 40px;
-    position: absolute;
     color: white;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-family: 'Inter', sans-serif;
     font-style: italic;
     font-weight: 900;
-    word-wrap: break-word;
+    cursor: pointer; /* Hiển thị con trỏ khi di chuột qua các mục */
+    margin-left: 20px; /* Khoảng cách giữa các mục navbar */
 }
 
-.login {
-    left: 1790px;
-    top: 87px;
+.navbar-item:hover {
+    color: #469707; /* Hiệu ứng khi hover vào mục navbar */
 }
 
-.contact {
-    left: 1626px;
-    top: 87px;
-}
-
-.about-us {
-    left: 1462px;
-    top: 87px;
-}
-
-.logo {
-    width: 162px;
-    height: 175px;
-    left: 0;
-    top: 0;
-    position: absolute;
+.navbar-logo {
+    width: auto;
+    height: 100px; /* Chiều cao logo */
+    margin-right: 20px; /* Khoảng cách từ logo đến các mục khác */
 }

@@ -1,47 +1,36 @@
 .footer-container {
-    width: 1920px;
-    height: 175px;
+    width: 100vw; /* Full chiều ngang màn hình */
+    height: 10vh; /* Chiều cao của footer */
+    position: fixed; /* Cố định footer ở dưới cùng */
+    bottom: 0; /* Cố định ở dưới cùng của màn hình */
     left: 0;
-    top: 1825px;
-    position: absolute;
     background: black;
+    z-index: 1000; /* Đảm bảo footer hiển thị dưới navbar */
+    display: flex; /* Sử dụng flexbox để căn chỉnh */
+    flex-direction: row-reverse;
+    justify-content: space-around; /* Khoảng cách đều giữa các mục */
+    align-items: flex-start; /* Căn giữa theo chiều dọc */
+    padding: 0 2vw; /* Khoảng cách hai bên */
 }
 
 .footer-section {
-    position: absolute;
     color: white;
-    font-size: 16px;
+    font-size: 1rem;
     font-family: 'Inter', sans-serif;
     font-style: italic;
     font-weight: 900;
-    word-wrap: break-word;
 }
 
-.resources {
-    left: 920px;
-    top: 20px;
+.footer-section:hover {
+    color: #469707; /* Hiệu ứng khi hover vào mục trong footer */
 }
 
-.country {
-    width: 128px;
-    left: 1217px;
-    top: 18px;
+.footer-logo {
+    width: auto;
+    height: 100%; /* Chiều cao logo tự động */
+    margin-right: 20px; /* Khoảng cách từ logo đến các mục khác */
 }
 
-.company {
-    left: 1476px;
-    top: 17px;
-}
-
-.follow-us {
-    left: 1684px;
-    top: 16px;
-}
-
-.logo {
-    width: 162px;
-    height: 175px;
-    left: 0;
-    top: 0;
-    position: absolute;
+.resources, .country, .company, .follow-us {
+    margin-right: 20px; /* Khoảng cách giữa các mục footer */
 }

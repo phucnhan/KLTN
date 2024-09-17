@@ -24,7 +24,7 @@ class Footer extends React.Component {
                 <div className="footer-section follow-us">
                     Follow Us
                 </div>
-                <img className="logo" src="image/logo.png" alt="Logo" />
+                <img className="footer-logo" src="image/logo.png" alt="Logo" />
             </div>
         );
     }

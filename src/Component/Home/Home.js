@@ -30,9 +30,10 @@ class Home extends React.Component {
                     <div className="homepage-headline-text">
                         Right nutrition, right training, real results
                     </div>
+                    <Footer />
                 </div>
 
-                <Footer />
+
             </div>
         );
     }
