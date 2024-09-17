@@ -1,25 +1,26 @@
-.home-container {
+.homepage-container {
     width: 1920px;
     height: 2000px;
     position: relative;
     background: white;
+    background-size: cover;
 }
 
-.submit-button {
+.homepage-submit-button {
     width: 224px;
     height: 59px;
     padding: 20px 76px 20px 84px;
     position: absolute;
-    left: 848px;
+    left: 760px;
     top: 1720px;
     background: #469707;
     border-radius: 30px;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
 }
 
-.submit-text {
+.homepage-submit-text {
     color: white;
     font-size: 16px;
     font-family: 'Inter', sans-serif;
@@ -28,7 +29,7 @@
     word-wrap: break-word;
 }
 
-.email-box {
+.homepage-email-box {
     width: 305px;
     height: 48px;
     position: absolute;
@@ -37,7 +38,7 @@
     background: #D9D9D9;
 }
 
-.email-text {
+.homepage-email-text {
     width: 161px;
     height: 23px;
     position: absolute;
@@ -50,7 +51,7 @@
     word-wrap: break-word;
 }
 
-.feedback-box {
+.homepage-feedback-box {
     width: 305px;
     height: 48px;
     position: absolute;
@@ -59,7 +60,7 @@
     background: #D9D9D9;
 }
 
-.feedback-text {
+.homepage-feedback-text {
     position: absolute;
     left: 866px;
     top: 1579px;
@@ -70,29 +71,29 @@
     word-wrap: break-word;
 }
 
-.image1, .image2, .image3 {
+.homepage-image1, .homepage-image2, .homepage-image3 {
     width: 600px;
     height: 401px;
     position: absolute;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.image1 {
+.homepage-image1 {
     left: 13px;
     top: 1056px;
 }
 
-.image2 {
+.homepage-image2 {
     left: 660px;
     top: 1059px;
 }
 
-.image3 {
+.homepage-image3 {
     left: 1308px;
     top: 1056px;
 }
 
-.start-now-button {
+.homepage-start-now-button {
     height: 144px;
     padding: 48px 74px;
     position: absolute;
@@ -105,7 +106,7 @@
     justify-content: center;
 }
 
-.start-now-text {
+.homepage-start-now-text {
     color: white;
     font-size: 40px;
     font-family: 'Inter', sans-serif;
@@ -114,7 +115,7 @@
     word-wrap: break-word;
 }
 
-.description-text {
+.homepage-description-text {
     width: 680px;
     height: 100px;
     position: absolute;
@@ -129,7 +130,7 @@
     word-wrap: break-word;
 }
 
-.headline-text {
+.homepage-headline-text {
     width: 698px;
     height: 95px;
     position: absolute;
