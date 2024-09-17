@@ -7,8 +7,6 @@ class Home extends React.Component {
     render() {
         return (
             <div>
-
-
                 <div className="homepage-container">
                 <Navbar />
                     <div className="homepage-submit-button">

@@ -1,0 +1,43 @@
+.navbar-container {
+    width: 1920px;
+    height: 175px;
+    left: 0;
+    top: 1px;
+    position: absolute;
+    background: black;
+}
+
+.navbar-item {
+    width: 130px;
+    height: 40px;
+    position: absolute;
+    color: white;
+    font-size: 24px;
+    font-family: 'Inter', sans-serif;
+    font-style: italic;
+    font-weight: 900;
+    word-wrap: break-word;
+}
+
+.login {
+    left: 1790px;
+    top: 87px;
+}
+
+.contact {
+    left: 1626px;
+    top: 87px;
+}
+
+.about-us {
+    left: 1462px;
+    top: 87px;
+}
+
+.logo {
+    width: 162px;
+    height: 175px;
+    left: 0;
+    top: 0;
+    position: absolute;
+}
