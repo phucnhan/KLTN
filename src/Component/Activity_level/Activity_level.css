@@ -1,0 +1,76 @@
+.container {
+    width: 1920px;
+    height: 2000px;
+    position: relative;
+    background: white;
+}
+
+.bar1, .bar2, .bar3, .bar4, .bar5 {
+    width: 175px;
+    height: 20px;
+    position: absolute;
+    background: #D9D9D9;
+}
+
+.bar1 { left: 328px; top: 339px; }
+.bar2 { left: 600px; top: 339px; }
+.bar3 { left: 872px; top: 339px; background: #99D7A6; }
+.bar4 { left: 1144px; top: 339px; }
+.bar5 { left: 1416px; top: 339px; }
+
+.back {
+    left: 131px;
+    top: 272px;
+    position: absolute;
+    color: black;
+    font-size: 40px;
+    font-family: Karla;
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+.box {
+    width: 800px;
+    height: 100px;
+    position: absolute;
+    background: #D9D9D9;
+    border-radius: 30px;
+}
+
+.title {
+    width: 500px;
+    height: 100px;
+    left: 710px;
+    top: 491px;
+    position: absolute;
+    text-align: center;
+    color: black;
+    font-size: 32px;
+    font-family: "Zen Antique";
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+.activity {
+    width: 250px;
+    height: 50px;
+    position: absolute;
+    text-align: center;
+    color: black;
+    font-size: 30px;
+    font-family: "Zen Antique";
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+.description {
+    width: 600px;
+    height: 40px;
+    position: absolute;
+    text-align: center;
+    color: black;
+    font-size: 25px;
+    font-family: Lora;
+    font-weight: 400;
+    word-wrap: break-word;
+}

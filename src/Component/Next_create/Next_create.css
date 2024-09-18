@@ -1,0 +1,162 @@
+.container {
+    width: 1920px;
+    height: 1080px;
+    position: relative;
+    background: white;
+}
+
+.box1, .box2, .box3 {
+    width: 800px;
+    height: 100px;
+    background: #D9D9D9;
+    border-radius: 30px;
+    position: absolute;
+}
+
+.box1 {
+    top: 320px;
+    left: 580px;
+}
+
+.box2 {
+    top: 467px;
+    left: 580px;
+}
+
+.box3 {
+    top: 624px;
+    left: 580px;
+}
+
+.text1, .text2, .text3, .text4, .text5, .text6 {
+    color: black;
+    font-weight: 400;
+    position: absolute;
+}
+
+.text1 {
+    font-size: 25px;
+    font-family: 'Lora';
+    top: 527px;
+    left: 751px;
+}
+
+.text2 {
+    font-size: 30px;
+    font-family: 'Zen Antique';
+    top: 467px;
+    left: 751px;
+}
+
+.text3 {
+    font-size: 30px;
+    font-family: 'Zen Antique';
+    top: 624px;
+    left: 748px;
+}
+
+.text4 {
+    font-size: 25px;
+    font-family: 'Lora';
+    top: 380px;
+    left: 748px;
+}
+
+.text5 {
+    font-size: 30px;
+    font-family: 'Zen Antique';
+    top: 322px;
+    left: 748px;
+}
+
+.text6 {
+    font-size: 25px;
+    font-family: 'Lora';
+    top: 684px;
+    left: 747px;
+}
+
+.image1, .image2, .image3 {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+
+.image1 {
+    top: 624px;
+    left: 603px;
+}
+
+.image2 {
+    top: 467px;
+    left: 603px;
+}
+
+.image3 {
+    top: 320px;
+    left: 603px;
+}
+
+.create-account {
+    width: 432px;
+    height: 60px;
+    text-align: center;
+    color: black;
+    font-size: 32px;
+    font-family: 'Zen Antique';
+    font-weight: 400;
+    position: absolute;
+    top: 233px;
+    left: 539px;
+}
+
+.meal-plan, .calories-info, .workout-plan {
+    font-size: 25px;
+    font-family: 'Lora';
+    color: black;
+    position: absolute;
+}
+
+.meal-plan {
+    top: 497px;
+    left: 747px;
+}
+
+.calories-info {
+    top: 357px;
+    left: 747px;
+}
+
+.workout-plan {
+    top: 654px;
+    left: 748px;
+}
+
+.back {
+    position: absolute;
+    top: 196px;
+    left: 352px;
+    color: black;
+    font-size: 40px;
+    font-family: 'Karla';
+    font-weight: 400;
+}
+
+.create-button {
+    padding: 23px;
+    background: #469707;
+    border-radius: 30px;
+    position: absolute;
+    top: 783px;
+    left: 765px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.create-button div {
+    color: white;
+    font-size: 36px;
+    font-family: 'Inter';
+    font-weight: 900;
+}

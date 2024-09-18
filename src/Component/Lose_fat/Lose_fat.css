@@ -1,0 +1,100 @@
+.lose-fat-container {
+    width: 1920px;
+    height: 2000px;
+    position: relative;
+    background: white;
+}
+
+.progress-bar {
+    display: flex;
+    position: absolute;
+    top: 339px;
+    left: 328px;
+}
+
+.progress-segment {
+    width: 175px;
+    height: 20px;
+    background: #d9d9d9;
+    margin-right: 20px;
+}
+
+.progress-segment.active {
+    background: #99d7a6;
+}
+
+.back-button {
+    position: absolute;
+    top: 272px;
+    left: 131px;
+    font-size: 40px;
+    font-family: 'Karla', sans-serif;
+}
+
+.target-weight-title {
+    width: 500px;
+    height: 100px;
+    text-align: center;
+    position: absolute;
+    top: 550px;
+    left: 710px;
+    font-size: 32px;
+    font-family: 'Zen Antique', serif;
+}
+
+.info-box {
+    width: 800px;
+    height: 100px;
+    background: #d9d9d9;
+    position: absolute;
+    border-radius: 30px;
+    top: 664px;
+    left: 560px;
+}
+
+.info-box img {
+    position: absolute;
+    top: 0;
+    left: 28px;
+    width: 100px;
+    height: 100px;
+}
+
+.info-box.recommended {
+    top: 1072px;
+}
+
+.recommended-text {
+    position: absolute;
+    top: 1107px;
+    left: 754px;
+    font-size: 24px;
+    font-family: 'Inter', sans-serif;
+}
+
+.continue-button {
+    position: absolute;
+    top: 272px;
+    left: 1657px;
+    font-size: 40px;
+    font-family: 'Karla', sans-serif;
+}
+
+.description {
+    position: absolute;
+    top: 818px;
+    left: 620px;
+    width: 749px;
+    font-size: 24px;
+    font-family: 'Inter', sans-serif;
+    font-style: italic;
+}
+
+.benefits {
+    position: absolute;
+    top: 1195px;
+    left: 602px;
+    font-size: 24px;
+    font-family: 'Inter', sans-serif;
+    font-style: italic;
+}
