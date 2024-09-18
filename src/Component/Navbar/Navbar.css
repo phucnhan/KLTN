@@ -1,35 +1,51 @@
 .navbar-container {
-    width: 100vw; /* Full chiều ngang màn hình */
-    height: 10vh; /* Chiều cao tùy chỉnh theo phần trăm chiều cao của màn hình */
-    position: fixed; /* Cố định navbar khi cuộn trang */
+    width: 100vw;
+    height: 10vh;
+    position: fixed;
     top: 0;
     left: 0;
     background: black;
-    z-index: 1001; /* Đảm bảo navbar luôn nổi trên các phần tử khác */
-    display: flex; /* Sử dụng flexbox để sắp xếp các mục trong navbar */
-    flex-direction: row-reverse; /* Sắp xếp các mục từ trái sang phải */
-    justify-content: space-around; /* Khoảng cách đều giữa các mục */
-    align-items: center; /* Căn giữa các mục theo chiều dọc */
-    align-content: space-around;
-    padding: 0 2vw; /* Khoảng cách hai bên */
+    z-index: 1001;
+    display: flex;
+    justify-content: space-around; /* Đặt khoảng cách giữa logo và các link */
+    align-items: center;
+    padding: 0 2vw;
 }
 
-.navbar-item {
+.navbar-logo {
+    width: auto;
+    height: 70px; /* Chiều cao logo */
+}
+
+.navbar {
+    display: flex;
+}
+
+.nav-items {
+    display: flex; /* Sắp xếp các link theo hàng ngang */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-link {
+    margin-left: 20px; /* Khoảng cách giữa các mục navbar */
+}
+
+.nav-link a {
     color: white;
     font-size: 1.5rem;
     font-family: 'Inter', sans-serif;
     font-style: italic;
     font-weight: 900;
-    cursor: pointer; /* Hiển thị con trỏ khi di chuột qua các mục */
-    margin-left: 20px; /* Khoảng cách giữa các mục navbar */
+    text-decoration: none;
+    transition: color 0.3s ease-in-out; /* Thêm hiệu ứng cho mỗi link */
 }
 
-.navbar-item:hover {
-    color: #469707; /* Hiệu ứng khi hover vào mục navbar */
+.nav-link a:hover {
+    color: #469707; /* Màu khi hover */
 }
 
-.navbar-logo {
-    width: auto;
-    height: 100px; /* Chiều cao logo */
-    margin-right: 20px; /* Khoảng cách từ logo đến các mục khác */
+.nav-link a:active {
+    color: #ffa500; /* Màu khi bấm vào link */
 }

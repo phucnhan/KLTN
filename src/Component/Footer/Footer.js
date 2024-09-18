@@ -5,26 +5,26 @@ class Footer extends React.Component {
     render() {
         return (
             <div className="footer-container">
+                <img className="footer-logo" src="image/logo.png" alt="Logo" />
                 <div className="footer-section resources">
-                    Resources<br /><br />
-                    Database<br /><br />
-                    Exercises Calculator
+                    <p>Resources</p>
+                    <p>Database</p>
+                    <p>Exercises Calculator</p>
                 </div>
                 <div className="footer-section country">
-                    Country<br /><br />
-                    United States<br /><br />
-                    Viet Nam<br /><br />
-                    Others
+                    <p>Country</p>
+                    <p>United States</p>
+                    <p>Viet Nam</p>
+                    <p>Others</p>
                 </div>
                 <div className="footer-section company">
-                    Company<br /><br />
-                    Contract<br /><br />
-                    Blog
+                    <p>Company</p>
+                    <p>Contract</p>
+                    <p>Blog</p>
                 </div>
                 <div className="footer-section follow-us">
-                    Follow Us
+                    <p>Follow Us</p>
                 </div>
-                <img className="footer-logo" src="image/logo.png" alt="Logo" />
             </div>
         );
     }

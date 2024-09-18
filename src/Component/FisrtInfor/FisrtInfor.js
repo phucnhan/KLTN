@@ -8,11 +8,6 @@ class FisrtInfor extends React.Component {
         return (
             <div className="container">
                 <Navbar />
-                <div className="progressBar1" />
-                <div className="progressBar2" />
-                <div className="progressBar3" />
-                <div className="progressBar4" />
-                <div className="progressBar5" />
                 <div className="backText">Back</div>
                 <div className="continueText">Continue</div>
                 <img className="icon" src="https://via.placeholder.com/100x100" alt="icon"/>
@@ -26,8 +21,8 @@ class FisrtInfor extends React.Component {
                 <div className="inputBox" style={{ top: 1246 }}></div>
                 <img className="icon" style={{ top: 1016 }} src="https://via.placeholder.com/100x100" alt="icon"/>
                 <img className="icon" style={{ top: 1246 }} src="https://via.placeholder.com/100x100" alt="icon"/>
-                <div className="unitText" style={{ top: 1051 }}>Cm</div>
-                <div className="unitText" style={{ top: 1281 }}>KG</div>
+                <div className="unitText" >Cm</div>
+                <div className="unitText" >KG</div>
                 <Footer />
             </div>
         );

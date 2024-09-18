@@ -1,16 +1,15 @@
 .footer-container {
-    width: 100vw; /* Full chiều ngang màn hình */
-    height: 10vh; /* Chiều cao của footer */
-    position: fixed; /* Cố định footer ở dưới cùng */
-    bottom: 0; /* Cố định ở dưới cùng của màn hình */
+    width: 100vw; /* Chiều rộng full màn hình */
+    height: auto; /* Chiều cao tự động */
+    position: fixed;
+    bottom: 0;
     left: 0;
     background: black;
-    z-index: 1000; /* Đảm bảo footer hiển thị dưới navbar */
-    display: flex; /* Sử dụng flexbox để căn chỉnh */
-    flex-direction: row-reverse;
-    justify-content: space-around; /* Khoảng cách đều giữa các mục */
-    align-items: flex-start; /* Căn giữa theo chiều dọc */
-    padding: 0 2vw; /* Khoảng cách hai bên */
+    z-index: 1000;
+    display: flex; /* Căn các mục theo hàng ngang */
+    justify-content: space-around; /* Đẩy logo về trái và các mục còn lại về phải */
+    align-items: top;
+    padding: 10px 2vw; /* Thêm khoảng cách giữa các cạnh */
 }
 
 .footer-section {
@@ -19,18 +18,23 @@
     font-family: 'Inter', sans-serif;
     font-style: italic;
     font-weight: 900;
+    margin-right: 20px; /* Khoảng cách giữa các mục footer */
 }
 
-.footer-section:hover {
-    color: #469707; /* Hiệu ứng khi hover vào mục trong footer */
+.footer-section p {
+    margin: 5px 0; /* Khoảng cách giữa các mục trong footer */
+    cursor: pointer; /* Thêm con trỏ khi hover */
 }
+
+
 
 .footer-logo {
     width: auto;
-    height: 100%; /* Chiều cao logo tự động */
-    margin-right: 20px; /* Khoảng cách từ logo đến các mục khác */
+    height: 70px; /* Điều chỉnh chiều cao logo */
+    margin-right: 20px;
 }
 
 .resources, .country, .company, .follow-us {
-    margin-right: 20px; /* Khoảng cách giữa các mục footer */
+    display: flex;
+    flex-direction: column; /* Sắp xếp các mục trong footer theo chiều dọc */
 }

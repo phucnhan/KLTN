@@ -12,10 +12,12 @@ class Home extends React.Component {
                     <div className="homepage-submit-button">
                         <div className="homepage-submit-text">SUBMIT</div>
                     </div>
-                    <div className="homepage-email-box"></div>
-                    <div className="homepage-email-text">Enter your email</div>
-                    <div className="homepage-feedback-box"></div>
-                    <div className="homepage-feedback-text">Enter your feedback</div>
+                    <div className="homepage-email-box">
+                        <input type="text" id="email-subscribe" placeholder="Enter your email..." />
+                    </div>
+                    <div className="homepage-feedback-box">
+                        <input type="text" id="feedback" placeholder="Enter your feedback..." />
+                    </div>
                     <img className="homepage-image1" src="image/home1.png" alt="Home 1" />
                     <img className="homepage-image2" src="image/home2.png" alt="Home 2" />
                     <img className="homepage-image3" src="image/home3.png" alt="Home 3" />

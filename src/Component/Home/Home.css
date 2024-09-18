@@ -5,9 +5,10 @@
     background: white;
     background-size: cover;
 }
+
 .homepage-start-now-button {
-    height: 0vw;
-    padding: 3vw 5vw;
+    height: auto;
+    padding: 1.5vw 3vw; /* Điều chỉnh kích thước padding cho phù hợp */
     position: absolute;
     left: 50vw;
     top: 35vw;
@@ -17,15 +18,92 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer; /* Thêm con trỏ chỉ tay */
+    transition: transform 0.3s ease, background 0.3s ease; /* Thêm hiệu ứng khi hover */
+}
+
+.homepage-start-now-button:hover {
+    transform: translateX(-50%) scale(1.05); /* Phóng to nút khi hover */
+    background: #3a7a05; /* Đổi màu nút khi hover */
 }
 
 .homepage-start-now-text {
     color: white;
-    font-size: 2.5rem;
+    font-size: 2rem; /* Giảm nhẹ kích thước chữ cho vừa vặn hơn */
     font-family: 'Inter', sans-serif;
     font-style: italic;
     font-weight: 900;
     word-wrap: break-word;
+}
+
+.homepage-submit-button {
+    width: 10vw; /* Thu nhỏ nút submit */
+    height: auto;
+    padding: 1rem 2vw; /* Điều chỉnh padding */
+    position: absolute;
+    left: 50vw;
+    top: 90vw;
+    transform: translateX(-50%);
+    background: #469707;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer; /* Thêm con trỏ chỉ tay */
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.homepage-submit-button:hover {
+    transform: translateX(-50%) scale(1.05); /* Phóng to nút khi hover */
+    background: #3a7a05; /* Đổi màu nút khi hover */
+}
+
+.homepage-submit-text {
+    color: white;
+    font-size: 1.2rem; /* Điều chỉnh kích thước chữ */
+    font-family: 'Inter', sans-serif;
+    font-style: italic;
+    font-weight: 900;
+    word-wrap: break-word;
+}
+
+.homepage-email-box input, .homepage-feedback-box input {
+    width: 100%; /* Cho phép text tự căn chỉnh theo chiều rộng hộp */
+    height: 100%;
+    padding: 0.5vw;
+    font-size: 1.2rem; /* Tăng kích thước chữ */
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    color: #494949;
+    border: none; /* Loại bỏ đường viền mặc định */
+    outline: none; /* Loại bỏ đường viền khi click vào */
+}
+
+.homepage-feedback-box {
+    width: 20vw;
+    height: 4vw; /* Điều chỉnh chiều cao để phù hợp hơn */
+    position: absolute;
+    left: 50vw;
+    top: 80vw;
+    transform: translateX(-50%);
+    background: #D9D9D9;
+    border-radius: 1rem; /* Thêm góc bo tròn */
+}
+
+.homepage-email-box {
+    width: 20vw;
+    height: 4vw; /* Điều chỉnh chiều cao để phù hợp hơn */
+    position: absolute;
+    left: 50vw;
+    top: 85vw;
+    transform: translateX(-50%);
+    background: #D9D9D9;
+    border-radius: 1rem; /* Thêm góc bo tròn */
+}
+
+.homepage-email-box input::placeholder, .homepage-feedback-box input::placeholder {
+    color: #7a7a7a; /* Thêm màu placeholder cho dễ nhìn */
+    font-size: 1.2rem; /* Điều chỉnh kích thước placeholder */
 }
 
 .homepage-description-text {
@@ -79,75 +157,4 @@
 .homepage-image3 {
     left: 65vw;
     top: 50vw;
-}
-
-.homepage-feedback-box {
-    width: 20vw;
-    height: 3vw;
-    position: absolute;
-    left: 50vw;
-    top: 80vw;
-    transform: translateX(-50%);
-    background: #D9D9D9;
-}
-
-.homepage-feedback-text {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    color: #494949;
-    font-size: 1.25rem;
-    font-family: 'Inter', sans-serif;
-    font-weight: 300;
-    word-wrap: break-word;
-}
-
-
-.homepage-email-box {
-    width: 20vw;
-    height: 3vw;
-    position: absolute;
-    left: 50vw;
-    top: 85vw;
-    transform: translateX(-50%);
-    background: #D9D9D9;
-}
-
-.homepage-email-text {
-    width: 10vw;
-    height: auto;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    color: #494949;
-    font-size: 1.25rem;
-    font-family: 'Inter', sans-serif;
-    font-weight: 300;
-    word-wrap: break-word;
-}
-
-.homepage-submit-button {
-    width: 14vw;
-    height: 3.5vw;
-    padding: 1.25rem 5vw;
-    position: absolute;
-    left: 50vw;
-    top: 90vw;
-    transform: translateX(-50%);
-    background: #469707;
-    border-radius: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.homepage-submit-text {
-    color: white;
-    font-size: 1rem;
-    font-family: 'Inter', sans-serif;
-    font-style: italic;
-    font-weight: 900;
-    word-wrap: break-word;
 }
