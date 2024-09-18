@@ -1,77 +1,108 @@
-.container {
-    width: 1920px;
-    height: 1080px;
-    position: relative;
-    background: white;
-}
-
-.back-button {
-    left: 352px;
-    top: 196px;
-    position: absolute;
-    color: black;
-    font-size: 40px;
-    font-family: 'Karla', sans-serif;
-    font-weight: 400;
-    word-wrap: break-word;
-}
-
-.login-button {
-    width: 390px;
-    padding-top: 23px;
-    padding-bottom: 23px;
-    left: 765px;
-    top: 783px;
-    position: absolute;
-    background: #469707;
-    border-radius: 30px;
-    overflow: hidden;
+/* Container của trang login */
+.login-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    display: inline-flex;
-    text-align: center;
-    color: white;
-    font-size: 36px;
-    font-family: 'Inter', sans-serif;
-    font-weight: 900;
-    word-wrap: break-word;
+    background-color: #f9f9f9;
+    position: relative;
 }
 
-.input-box {
-    width: 800px;
-    height: 100px;
+/* Nút back */
+.back-button {
     position: absolute;
-    background: #D9D9D9;
-    border-radius: 30px;
+    top: 20px;
+    left: 20px;
+    color: #469707;
+    font-size: 24px;
+    font-family: 'Karla', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
 }
 
-.input-box.username {
-    left: 560px;
-    top: 364px;
+.back-button:hover {
+    color: #3a7a05;
 }
 
-.input-box.password {
-    left: 560px;
-    top: 535px;
+/* Form đăng nhập */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
+/* Hộp input */
+.input-box {
+    width: 80%;
+    margin: 20px 0;
+    position: relative;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+.input-box input:focus {
+    border-color: #469707;
+}
+
+/* Label của các trường */
 .label {
     position: absolute;
-    color: black;
-    font-size: 24px;
+    top: -20px;
+    left: 10px;
+    color: #494949;
+    font-size: 18px;
     font-family: 'Inter', sans-serif;
     font-style: italic;
-    font-weight: 400;
-    word-wrap: break-word;
 }
 
-.label.username-label {
-    left: 582px;
-    top: 323px;
+/* Nút login */
+.login-button {
+    width: 50%;
+    padding: 15px;
+    background-color: #469707;
+    color: white;
+    font-size: 24px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 900;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.label.password-label {
-    left: 582px;
-    top: 485px;
+.login-button:hover {
+    background-color: #3a7a05;
+    transform: scale(1.05);
 }
 
+/* Responsive thiết kế */
+@media (max-width: 768px) {
+    .login-container {
+        padding: 20px;
+    }
+
+    .login-form {
+        width: 100%;
+    }
+
+    .login-button {
+        width: 80%;
+    }
+
+    .input-box {
+        width: 100%;
+    }
+}

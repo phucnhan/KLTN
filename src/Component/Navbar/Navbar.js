@@ -6,9 +6,6 @@ class Navbar extends React.Component {
     render() {
         return (
             <div className="navbar-container">
-                <Link to="/">
-                    <img className="navbar-logo" src="image/logo.png" alt="Logo" />
-                </Link>
                 <nav className="navbar">
                     <ul className="nav-items">
                         <li className="nav-link">
@@ -18,10 +15,21 @@ class Navbar extends React.Component {
                             <Link to="/contact">Contact</Link>
                         </li>
                         <li className="nav-link">
-                            <Link to="/login">Login</Link>
+                            <li className="nav-avatar">
+                                <Link to="/login">
+                                    <img
+                                        className="avatar"
+                                        src="image/avatar.png"
+                                        alt="Avatar"
+                                    />
+                                </Link>
+                            </li>
                         </li>
                     </ul>
                 </nav>
+                <Link to="/home">
+                    <img className="navbar-logo" src="image/logo.png" alt="Logo" />
+                </Link>
             </div>
         );
     }

@@ -1,31 +1,47 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Login.css";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
 
+const Login = () => {
+    const [username, setUsername] = useState('');
+    const [password, setPassword] = useState('');
 
-class Login extends React.Component {
-    render() {
-        return (
-         
-            <div className="container">
-            <Navbar/>
+    const handleLogin = () => {
+        console.log(`Logging in with Username: ${username}, Password: ${password}`);
+        // Logic xử lý đăng nhập ở đây
+    };
+
+    return (
+        <div className="login-container">
+            <Navbar />
             <div className="back-button">Back</div>
-            <div className="login-button">
-              <div>Login</div>
+            <div className="login-form">
+                <div className="input-box username">
+                    <input
+                        type="text"
+                        placeholder="Enter Username"
+                        value={username}
+                        onChange={(e) => setUsername(e.target.value)}
+                    />
+                </div>
+                <div className="input-box password">
+                    <input
+                        type="password"
+                        placeholder="Enter Password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                    />
+                </div>
+                <div className="label username-label">Username</div>
+                <div className="label password-label">Password</div>
+                <div className="login-button" onClick={handleLogin}>
+                    <div>Login</div>
+                </div>
             </div>
-            <div className="input-box username"></div>
-            <div className="input-box password"></div>
-            <div className="label username-label">Username</div>
-            <div className="label password-label">Password</div>
             <Footer />
-          </div>
-          
-        );
-    }
-}
+        </div>
+    );
+};
 
 export default Login;
-
-
-

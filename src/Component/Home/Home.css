@@ -158,3 +158,26 @@
     left: 65vw;
     top: 50vw;
 }
+
+.homepage-email-box, .homepage-feedback-box {
+    border: 2px solid #494949; /* Thêm khung bao trọn với màu sắc */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Thêm bóng nhẹ để nổi bật hơn */
+    padding: 0.5vw; /* Thêm khoảng cách giữa viền và nội dung bên trong */
+}
+
+.homepage-email-box input, .homepage-feedback-box input {
+    width: calc(100% - 1rem); /* Đảm bảo input không bị chèn viền */
+    height: 100%;
+    padding: 0.5vw;
+    font-size: 1.2rem; /* Tăng kích thước chữ */
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    color: #494949;
+    border: none; /* Loại bỏ viền của input bên trong */
+    outline: none; /* Loại bỏ đường viền khi click vào */
+}
+
+.homepage-email-box input::placeholder, .homepage-feedback-box input::placeholder {
+    color: #7a7a7a; /* Thay đổi màu placeholder cho dễ nhìn */
+}
+
