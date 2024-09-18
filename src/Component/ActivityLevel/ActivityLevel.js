@@ -1,9 +1,9 @@
 import React from "react";
-import "./Activity_level.css";
+import "./ActivityLevel.css";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
 
-class Activity_level extends React.Component {
+class ActivityLevel extends React.Component {
     render() {
         return (
             <div className="container">
@@ -36,4 +36,4 @@ class Activity_level extends React.Component {
     }
 }
 
-export default Activity_level;
+export default ActivityLevel;

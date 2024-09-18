@@ -1,9 +1,9 @@
 import React from "react";
-import "./Lose_fat.css";
+import "./LoseFat.css";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
 
-class Lose_fat extends React.Component {
+class LoseFat extends React.Component {
     render() {
         return (
             <div className="lose-fat-container">
@@ -41,4 +41,4 @@ class Lose_fat extends React.Component {
     }
 }
 
-export default Lose_fat;
+export default LoseFat;

@@ -1,9 +1,9 @@
 import React from "react";
-import "./Fisrt_infor.css"; // Import CSS
+import "./FisrtInfor.css"; // Import CSS
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
 
-class Fisrt_infor extends React.Component {
+class FisrtInfor extends React.Component {
     render() {
         return (
             <div className="container">
@@ -34,4 +34,4 @@ class Fisrt_infor extends React.Component {
     }
 }
 
-export default Fisrt_infor;
+export default FisrtInfor;

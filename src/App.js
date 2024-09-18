@@ -5,25 +5,25 @@ import Signup from './Component/Signup/Signup';
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Login from './Component/Login/Login';
-import Fisrt_infor from './Component/Fisrt_infor/Fisrt_infor';
+import FisrtInfor from './Component/FisrtInfor/FisrtInfor';
 import Goals from './Component/Goals/Goals';
-import Activity_level from './Component/Activity_level/Activity_level';
+import ActivityLevel from './Component/ActivityLevel/ActivityLevel';
 import Food from './Component/Food/Food';
-import Lose_fat from './Component/Lose_fat/Lose_fat';
-import Next_create from './Component/Next_create/Next_create';
+import LoseFat from './Component/LoseFat/LoseFat';
+import NextCreate from './Component/NextCreate/NextCreate';
 function App() {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<div className="app-container"><Home /></div>} />
-        <Route path="/Fisrt_infor" element={<div className="app-container"><Fisrt_infor /></div>} />
-        <Route path="/Goals" element={<div className="app-container"><Goals /></div>} />
-        <Route path="/Activity_level" element={<div className="app-container"><Activity_level /></div>} />
-        <Route path="/Food" element={<div className="app-container"><Food /></div>} />
-        <Route path="/Lose_fat" element={<div className="app-container"><Lose_fat /></div>} />
-        <Route path="/Next_create" element={<div className="app-container"><Next_create /></div>} />
-        <Route path="/Signup" element={<div className="app-container"><Signup /></div>} />
-        <Route path="/Login" element={<div className="app-container"><Login /></div>} />
+        <Route path="/fisrtinfor" element={<div className="app-container"><FisrtInfor /></div>} />
+        <Route path="/goals" element={<div className="app-container"><Goals /></div>} />
+        <Route path="/activityLevel" element={<div className="app-container"><ActivityLevel /></div>} />
+        <Route path="/food" element={<div className="app-container"><Food /></div>} />
+        <Route path="/losefat" element={<div className="app-container"><LoseFat /></div>} />
+        <Route path="/nextCreate" element={<div className="app-container"><NextCreate /></div>} />
+        <Route path="/signup" element={<div className="app-container"><Signup /></div>} />
+        <Route path="/login" element={<div className="app-container"><Login /></div>} />
       </Routes>
     </Router>
 

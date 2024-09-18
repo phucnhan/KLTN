@@ -1,9 +1,9 @@
 import React from "react";
-import "./Next_create.css";
+import "./NextCreate.css";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
 
-class Next_create extends React.Component {
+class NextCreate extends React.Component {
     render() {
         return (
             <div className="container">
@@ -34,4 +34,4 @@ class Next_create extends React.Component {
     }
 }
 
-export default Next_create;
+export default NextCreate;
