@@ -9,8 +9,8 @@ class Home extends React.Component {
         return (
             <div>
                 <div className="homepage-container">
-                <Navbar />
-                    
+                    <Navbar />
+
                     <div className="homepage-description-text">
                         Personalized workout plan to achieve your desired body shape 💪 ,<br />
                         Personalized nutrition plan for optimal health 🎯<br />
@@ -21,7 +21,7 @@ class Home extends React.Component {
                     </div>
                     <div className="homepage-start-now-button">
                         <div className="homepage-start-now-text">
-                            <Link to="/signup">Start now</Link>
+                            <Link to="/firstinfor">Start now</Link>
                         </div>
                     </div>
                     <img className="homepage-image1" src="image/home1.png" alt="Home 1" />
@@ -36,7 +36,7 @@ class Home extends React.Component {
                     <div className="homepage-submit-button">
                         <div className="homepage-submit-text">SUBMIT</div>
                     </div>
-                    <Footer />                 
+                    <Footer />
                 </div>
             </div>
         );
