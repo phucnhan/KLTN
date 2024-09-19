@@ -184,5 +184,5 @@
 /*bỏ hiệu ứng người dùng mặc định*/
 a:-webkit-any-link{
     text-decoration: none;
-    color: white;
+    color: rgb(0, 0, 0);
 }
