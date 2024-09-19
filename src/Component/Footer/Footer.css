@@ -1,15 +1,25 @@
 .footer-container {
-    width: 100vw; /* Chiều rộng full màn hình */
-    height: auto; /* Chiều cao tự động */
+    width: 100vw;
+    height: auto;
     position: fixed;
     bottom: 0;
     left: 0;
     background: black;
     z-index: 1000;
-    display: flex; /* Căn các mục theo hàng ngang */
-    justify-content: space-around; /* Đẩy logo về trái và các mục còn lại về phải */
+    display: flex;
+    justify-content: space-around;
     align-items: top;
-    padding: 10px 2vw; /* Thêm khoảng cách giữa các cạnh */
+    padding: 10px 2vw;
+    transition: transform 0.3s ease-in-out; /* Thêm animation chuyển động */
+    transform: translateY(100%); /* Mặc định ẩn footer */
+}
+
+.footer-container.show {
+    transform: translateY(0); /* Khi hiện, footer trượt lên */
+}
+
+.footer-container.hide {
+    transform: translateY(100%); /* Khi ẩn, footer trượt xuống */
 }
 
 .footer-section {
@@ -18,23 +28,21 @@
     font-family: 'Inter', sans-serif;
     font-style: italic;
     font-weight: 900;
-    margin-right: 20px; /* Khoảng cách giữa các mục footer */
+    margin-right: 20px;
 }
 
 .footer-section p {
-    margin: 5px 0; /* Khoảng cách giữa các mục trong footer */
-    cursor: pointer; /* Thêm con trỏ khi hover */
+    margin: 5px 0;
+    cursor: pointer;
 }
-
-
 
 .footer-logo {
     width: auto;
-    height: 70px; /* Điều chỉnh chiều cao logo */
+    height: 70px;
     margin-right: 20px;
 }
 
 .resources, .country, .company, .follow-us {
     display: flex;
-    flex-direction: column; /* Sắp xếp các mục trong footer theo chiều dọc */
+    flex-direction: column;
 }

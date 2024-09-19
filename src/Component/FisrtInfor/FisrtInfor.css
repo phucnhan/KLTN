@@ -1,105 +1,86 @@
-.container {
-    width: 1920px;
-    height: 2000px;
-    position: relative;
+.firstinfor-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
     background: white;
 }
 
-.progressBar1, .progressBar2, .progressBar3, .progressBar4, .progressBar5 {
-    width: 175px;
-    height: 20px;
-    position: absolute;
-    background: #D9D9D9;
+.form-container {
+    width: 90vw; /* Đảm bảo form chiếm tối đa 90% chiều rộng của màn hình */
+    max-width: 600px; /* Giới hạn tối đa chiều rộng của form */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    box-sizing: border-box;
 }
+  
+  .back-button {
+    background: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border: none;
+    color: #333;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .gender-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .gender-container button {
+    width: 48%;
+    padding: 10px;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .gender-container button.selected {
+    background-color: #d2a275;
+    color: white;
+    border: none;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .continue-button {
+    background: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border: none;
+    color: #333;
+    font-size: 12px;
+    margin-bottom: 20px;
+  }
 
 
-.backText {
-    left: 131px;
-    top: 272px;
-    position: absolute;
-    color: black;
-    font-size: 40px;
-    font-family: Karla;
-    font-weight: 400;
-    word-wrap: break-word;
-}
-
-.continueText {
-    left: 1649px;
-    top: 262px;
-    position: absolute;
-    color: black;
-    font-size: 40px;
-    font-family: Karla;
-    font-weight: 400;
-    word-wrap: break-word;
-}
-
-.icon {
-    width: 100px;
-    height: 100px;
-    left: 588px;
-    position: absolute;
-}
-
-.box {
-    width: 300px;
-    height: 100px;
-    position: absolute;
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
-}
-
-.maleBox {
-    left: 695px;
-    top: 556px;
-    background: #DAB896;
-}
-
-.femaleBox {
-    left: 1027px;
-    top: 556px;
-    background: #D9D9D9;
-}
-
-.maleText, .femaleText {
-    width: 150px;
-    height: 60px;
-    position: absolute;
-    text-align: center;
-    color: black;
-    font-size: 40px;
-    font-family: "Zen Antique";
-    font-weight: 400;
-    word-wrap: break-word;
-}
-
-.maleText {
-    left: 770px;
-    top: 576px;
-}
-
-.femaleText {
-    left: 1061px;
-    top: 576px;
-}
-
-.inputBox {
-    width: 800px;
-    height: 100px;
-    left: 560px;
-    position: absolute;
-    background: #D9D9D9;
-    border-radius: 30px;
-}
-
-.unitText {
-    position: absolute;
-    left: 1133px;
-    color: black;
-    font-size: 24px;
-    font-family: Inter;
-    font-style: italic;
-    font-weight: 400;
-    word-wrap: break-word;
-}
+  
+  
+  .continue-button:hover {
+    background-color: #0056b3;
+  }
+  
