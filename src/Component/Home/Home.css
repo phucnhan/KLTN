@@ -181,3 +181,8 @@
     color: #7a7a7a; /* Thay đổi màu placeholder cho dễ nhìn */
 }
 
+/*bỏ hiệu ứng người dùng mặc định*/
+a:-webkit-any-link{
+    text-decoration: none;
+    color: white;
+}
