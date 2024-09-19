@@ -1,3 +1,4 @@
+//Buoc 5
 import React from "react";
 import "./LoseFat.css";
 import Navbar from "../Navbar/Navbar";

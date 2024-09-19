@@ -1,100 +1,77 @@
-
 .signup-container {
-    width: 1920px;
-    height: 1080px;
-    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
     background: white;
 }
 
-.back-button {
-    left: 352px;
-    top: 196px;
-    position: absolute;
+.form-container {
+    width: 90vw; /* Đảm bảo form chiếm tối đa 90% chiều rộng của màn hình */
+    max-width: 600px; /* Giới hạn tối đa chiều rộng của form */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.input-field {
+    width: 100%; /* Chiếm toàn bộ chiều rộng container */
+    margin-bottom: 1.5rem;
+    background: #D9D9D9;
+    border-radius: 20px;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.input-field input {
+    width: 100%; /* Chiếm toàn bộ chiều rộng của input */
+    height: 100%;
+    border: none;
+    background: none;
+    outline: none;
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+    color: #333;
+}
+
+.label-username, .label-password, .label-reenter {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 0.5rem;
     color: black;
-    font-size: 40px;
-    font-family: 'Karla', sans-serif;
-    font-weight: 400;
+    font-size: 1.2rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
     word-wrap: break-word;
 }
 
 .sign-up-button {
-    width: 390px;
-    padding: 23px 127px;
-    left: 765px;
-    top: 783px;
-    position: absolute;
+    width: 100%;
+    max-width: 200px;
+    padding: 1rem;
     background: #469707;
-    border-radius: 30px;
-    overflow: hidden;
-    display: inline-flex;
-    justify-content: center;
+    border-radius: 20px;
+    display: flex;
     align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.sign-up-button:hover {
+    background: #3a7a05;
 }
 
 .sign-up-button-text {
     text-align: center;
     color: white;
-    font-size: 36px;
+    font-size: 1.5rem;
     font-family: 'Inter', sans-serif;
     font-weight: 900;
-    word-wrap: break-word;
-}
-
-.input-field {
-    width: 800px;
-    height: 100px;
-    position: absolute;
-    background: #D9D9D9;
-    border-radius: 30px;
-}
-
-.input-field-username {
-    left: 560px;
-    top: 274px;
-}
-
-.input-field-password {
-    left: 560px;
-    top: 445px;
-}
-
-.input-field-reenter {
-    left: 560px;
-    top: 617px;
-}
-
-.label-username {
-    left: 582px;
-    top: 233px;
-    position: absolute;
-    color: black;
-    font-size: 24px;
-    font-family: 'Inter', sans-serif;
-    font-style: italic;
-    font-weight: 400;
-    word-wrap: break-word;
-}
-
-.label-password {
-    left: 582px;
-    top: 395px;
-    position: absolute;
-    color: black;
-    font-size: 24px;
-    font-family: 'Inter', sans-serif;
-    font-style: italic;
-    font-weight: 400;
-    word-wrap: break-word;
-}
-
-.label-reenter {
-    left: 582px;
-    top: 571px;
-    position: absolute;
-    color: black;
-    font-size: 24px;
-    font-family: 'Inter', sans-serif;
-    font-style: italic;
-    font-weight: 400;
-    word-wrap: break-word;
 }

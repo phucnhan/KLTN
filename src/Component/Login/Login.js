@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Login.css";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
+import { Link } from 'react-router-dom';
 
 const Login = () => {
     const [username, setUsername] = useState('');
@@ -15,7 +16,6 @@ const Login = () => {
     return (
         <div className="login-container">
             <Navbar />
-            <div className="back-button">Back</div>
             <div className="login-form">
                 <div className="input-box username">
                     <input
@@ -37,6 +37,9 @@ const Login = () => {
                 <div className="label password-label">Password</div>
                 <div className="login-button" onClick={handleLogin}>
                     <div>Login</div>
+                </div>
+                <div>
+                <Link to="/signup">Create new account</Link>
                 </div>
             </div>
             <Footer />
