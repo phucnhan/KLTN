@@ -2,6 +2,7 @@ import React from "react";
 import "./Home.css";  // Import CSS
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
+import { Link } from 'react-router-dom';
 
 class Home extends React.Component {
     render() {
@@ -19,7 +20,9 @@ class Home extends React.Component {
                         Right nutrition, right training, real results
                     </div>
                     <div className="homepage-start-now-button">
-                        <div className="homepage-start-now-text">Start now</div>
+                        <div className="homepage-start-now-text">
+                            <Link to="/signup">Start now</Link>
+                        </div>
                     </div>
                     <img className="homepage-image1" src="image/home1.png" alt="Home 1" />
                     <img className="homepage-image2" src="image/home2.png" alt="Home 2" />
