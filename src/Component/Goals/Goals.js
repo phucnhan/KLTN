@@ -1,3 +1,4 @@
+//Buoc 2
 import React from "react";
 import "./Goals.css"; // External CSS
 import Navbar from "../Navbar/Navbar";

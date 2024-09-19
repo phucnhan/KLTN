@@ -10,21 +10,6 @@
     position: relative;
 }
 
-/* Nút back */
-.back-button {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    color: #469707;
-    font-size: 24px;
-    font-family: 'Karla', sans-serif;
-    font-weight: 500;
-    cursor: pointer;
-}
-
-.back-button:hover {
-    color: #3a7a05;
-}
 
 /* Form đăng nhập */
 .login-form {
