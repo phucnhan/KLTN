@@ -2,7 +2,6 @@
 import React from "react";
 import "./Food.css";
 import Navbar from "../Navbar/Navbar";
-import Footer from "../Footer/Footer";
 
 
 class Food extends React.Component {
@@ -142,8 +141,6 @@ class Food extends React.Component {
             <div style={{width: 82, left: 1130, top: 2128, position: 'absolute', textAlign: 'center', color: '#1D1B20', fontSize: 14, fontFamily: 'Roboto', fontWeight: '500', lineHeight: 20, letterSpacing: 0.10, wordWrap: 'break-word'}}>Blueberries</div>
             <div style={{width: 70, left: 1136, top: 1424, position: 'absolute', textAlign: 'center', color: '#1D1B20', fontSize: 14, fontFamily: 'Roboto', fontWeight: '500', lineHeight: 20, letterSpacing: 0.10, wordWrap: 'break-word'}}>Walnuts</div>
             <div style={{width: 70, left: 1137, top: 1776, position: 'absolute', textAlign: 'center', color: '#1D1B20', fontSize: 14, fontFamily: 'Roboto', fontWeight: '500', lineHeight: 20, letterSpacing: 0.10, wordWrap: 'break-word'}}>Soy Milk</div>
-          
-            <Footer/>
             </div>
           
 

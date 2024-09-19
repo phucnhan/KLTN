@@ -1,7 +1,6 @@
 import React from "react";
 import "./Signup.css";
 import Navbar from "../Navbar/Navbar";
-import Footer from "../Footer/Footer";
 import { Link } from 'react-router-dom';
 
 class Signup extends React.Component {
@@ -32,7 +31,6 @@ class Signup extends React.Component {
                         <Link to="/login">Already have account</Link>
                     </div>
                 </div>
-                <Footer />
             </div>
         );
     }

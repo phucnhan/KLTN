@@ -2,7 +2,6 @@
 import React from "react";
 import "./LoseFat.css";
 import Navbar from "../Navbar/Navbar";
-import Footer from "../Footer/Footer";
 
 class LoseFat extends React.Component {
     render() {
@@ -36,7 +35,6 @@ class LoseFat extends React.Component {
                     <br /> ✔️ Visible results in the short term
                     <br /> ✔️ Sustainable diet
                 </div>
-                <Footer />
             </div>
         );
     }

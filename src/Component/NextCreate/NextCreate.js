@@ -2,7 +2,6 @@
 import React from "react";
 import "./NextCreate.css";
 import Navbar from "../Navbar/Navbar";
-import Footer from "../Footer/Footer";
 
 class NextCreate extends React.Component {
     render() {
@@ -29,7 +28,6 @@ class NextCreate extends React.Component {
                 <div className="create-button">
                     <div>Create account</div>
                 </div>
-                <Footer />
             </div>
         );
     }

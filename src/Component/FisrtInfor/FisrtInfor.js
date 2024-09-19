@@ -1,6 +1,5 @@
 import "./FisrtInfor.css"; // Import CSS
 import Navbar from "../Navbar/Navbar";
-import Footer from "../Footer/Footer";
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -83,7 +82,6 @@ const FirstInfor = () => {
           <Link to="/goals">Continue &gt;</Link>
         </button>
         </div>
-        <Footer/>
     </div>
   );
 };

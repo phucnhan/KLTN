@@ -47,8 +47,9 @@ class Goals extends React.Component {
                         </Link>
                     </div>
                 </div>
-
+                <Link to="/firstinfor">
                 <div className="backText">Back</div>
+                </Link>
             </div>
         );
     }
