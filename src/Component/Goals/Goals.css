@@ -1,67 +1,139 @@
-.container {
-    width: 1920px;
-    height: 1080px;
-    position: relative;
-    background: white;
+/* Goals.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.progressBar {
-    width: 175px;
-    height: 20px;
-    position: absolute;
-    background: #D9D9D9;
+
+
+.goals-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    min-height: 100vh;
+    text-align: center;
+
 }
 
-.bar1 { left: 470px; top: 259px; }
-.bar2 { left: 680px; top: 256px; background: #99D7A6; }
-.bar3 { left: 890px; top: 253px; }
-.bar4 { left: 1100px; top: 250px; }
-.bar5 { left: 1310px; top: 247px; }
-
-.goalBox {
-    width: 800px;
-    height: 100px;
-    position: absolute;
-    background: #D9D9D9;
-    border-radius: 30px;
+.goaltextbox {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 40px;
+    margin-top: 10vh;
+    border-radius: 10px;
+    padding: 20px;
 }
 
-.loseFat { left: 578px; top: 393px; }
-.maintainWeight { left: 578px; top: 540px; }
-.muscleGain { left: 578px; top: 697px; }
+
+.textGoals {
+    font-size: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+/* Style for each goal item container */
+.goalItemlosefat {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 1vh;
+    margin-bottom: 40px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    cursor: pointer;
+}
+
+.goalItem {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 40px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    cursor: pointer;
+}
+.goalContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
 
 .goalText {
-    position: absolute;
-    color: black;
-    font-size: 30px;
-    font-family: 'Zen Antique';
-    font-weight: 400;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
-
-.loseFatText { left: 746px; top: 395px; }
-.maintainWeightText { left: 749px; top: 540px; }
-.muscleGainText { left: 746px; top: 697px; }
 
 .descriptionText {
-    position: absolute;
-    color: black;
-    font-size: 25px;
-    font-family: 'Lora';
-    font-weight: 400;
-    word-wrap: break-word;
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 10px;
 }
 
-.loseFatDescription { left: 746px; top: 453px; }
-.maintainWeightDescription { left: 749px; top: 600px; }
-.muscleGainDescription { left: 745px; top: 757px; }
-
-.icon {
-    width: 100px;
-    height: 100px;
-    position: absolute;
+.goals-icon {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-top: 10px;
 }
 
-.icon:nth-of-type(1) { left: 601px; top: 393px; }
-.icon:nth-of-type(2) { left: 601px; top: 540px; }
-.icon:nth-of-type(3) { left: 601px; top: 697px; }
+.backText {
+    font-size: 1.2rem;
+    color: #007bff;
+    margin-top: 30px;
+    cursor: pointer;
+}
 
+.footer {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 1rem;
+    color: #999;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .goalText {
+        font-size: 1.3rem;
+    }
+
+    .descriptionText {
+        font-size: 0.9rem;
+    }
+
+    .goalItem {
+        max-width: 100%;
+    }
+
+    .goals-icon {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .goalText {
+        font-size: 1.1rem;
+    }
+
+    .descriptionText {
+        font-size: 0.8rem;
+    }
+
+    .goals-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .goalItem {
+        width: 100%;
+    }
+}
