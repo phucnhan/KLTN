@@ -65,13 +65,3 @@
 .icon:nth-of-type(2) { left: 601px; top: 540px; }
 .icon:nth-of-type(3) { left: 601px; top: 697px; }
 
-.backText {
-    left: 314px;
-    top: 196px;
-    position: absolute;
-    color: black;
-    font-size: 40px;
-    font-family: 'Karla';
-    font-weight: 400;
-    word-wrap: break-word;
-}

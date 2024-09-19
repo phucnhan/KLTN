@@ -17,7 +17,7 @@ function App() {
       <Routes>
         <Route path="/" element={<div className="app-container"><Home /></div>} />
         <Route path="/home" element={<div className="app-container"><Home /></div>} />
-        <Route path="/fisrtinfor" element={<div className="app-container"><FisrtInfor /></div>} />
+        <Route path="/firstinfor" element={<div className="app-container"><FisrtInfor /></div>} />
         <Route path="/goals" element={<div className="app-container"><Goals /></div>} />
         <Route path="/activityLevel" element={<div className="app-container"><ActivityLevel /></div>} />
         <Route path="/food" element={<div className="app-container"><Food /></div>} />

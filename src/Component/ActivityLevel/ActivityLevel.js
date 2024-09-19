@@ -14,7 +14,6 @@ class ActivityLevel extends React.Component {
                 <div className="bar3" />
                 <div className="bar4" />
                 <div className="bar5" />
-                <div className="back"> Back</div>
                 <div className="box" style={{ top: 726 }}></div>
                 <div className="box" style={{ top: 906 }}></div>
                 <div className="box" style={{ top: 1446 }}></div>

@@ -8,14 +8,8 @@ import Footer from "../Footer/Footer";
 class Food extends React.Component {
     render() {
         return (
-         
-            <div style={{width: 1920, height: 3000, position: 'relative', background: 'white'}}>
-            <div style={{width: 1920, height: 175, left: 0, top: 0, position: 'absolute', background: 'black'}}>
-              <div style={{width: 130, height: 40, left: 1790, top: 88, position: 'absolute', color: 'white', fontSize: 24, fontFamily: 'Inter', fontStyle: 'italic', fontWeight: '900', wordWrap: 'break-word'}}>Login</div>
-              <div style={{width: 130, height: 40, left: 1626, top: 88, position: 'absolute', color: 'white', fontSize: 24, fontFamily: 'Inter', fontStyle: 'italic', fontWeight: '900', wordWrap: 'break-word'}}>Contact</div>
-              <div style={{width: 130, height: 40, left: 1462, top: 88, position: 'absolute', color: 'white', fontSize: 24, fontFamily: 'Inter', fontStyle: 'italic', fontWeight: '900', wordWrap: 'break-word'}}>About Us</div>
-              <img style={{width: 162, height: 175, left: 0, top: 0, position: 'absolute'}} src="https://via.placeholder.com/162x175" />
-            </div>
+         <div>
+            <Navbar/>
             <div style={{width: 175, height: 20, left: 328, top: 339, position: 'absolute', background: '#D9D9D9'}} />
             <div style={{width: 175, height: 20, left: 600, top: 339, position: 'absolute', background: '#D9D9D9'}} />
             <div style={{width: 175, height: 20, left: 872, top: 339, position: 'absolute', background: '#D9D9D9'}} />
@@ -33,27 +27,6 @@ class Food extends React.Component {
             <div style={{width: 59, left: 1238, top: 2040, position: 'absolute', textAlign: 'center', color: 'black', fontSize: 14, fontFamily: 'Roboto', fontWeight: '500', lineHeight: 20, letterSpacing: 0.10, wordWrap: 'break-word'}}>Select all</div>
             <div style={{width: 59, left: 1238, top: 1336, position: 'absolute', textAlign: 'center', color: 'black', fontSize: 14, fontFamily: 'Roboto', fontWeight: '500', lineHeight: 20, letterSpacing: 0.10, wordWrap: 'break-word'}}>Select all</div>
             <div style={{width: 59, left: 1239, top: 1688, position: 'absolute', textAlign: 'center', color: 'black', fontSize: 14, fontFamily: 'Roboto', fontWeight: '500', lineHeight: 20, letterSpacing: 0.10, wordWrap: 'break-word'}}>Select all</div>
-            <div style={{width: 1920, height: 175, left: 0, top: 2825, position: 'absolute', background: 'black'}}>
-              <div style={{left: 215, top: 21, position: 'absolute', color: 'white', fontSize: 16, fontFamily: 'Inter', fontStyle: 'italic', fontWeight: '900', wordWrap: 'break-word'}}>Resources</div>
-              <div style={{left: 215, top: 47, position: 'absolute', color: 'white', fontSize: 16, fontFamily: 'Inter', fontStyle: 'italic', fontWeight: '900', wordWrap: 'break-word'}}>Database</div>
-              <div style={{left: 215, top: 73, position: 'absolute', color: 'white', fontSize: 16, fontFamily: 'Inter', fontStyle: 'italic', fontWeight: '900', wordWrap: 'break-word'}}>Exercises Calculator</div>
-              <div style={{left: 439, top: 21, position: 'absolute', color: 'white', fontSize: 16, fontFamily: 'Inter', fontStyle: 'italic', fontWeight: '900', wordWrap: 'break-word'}}>Country</div>
-              <div style={{left: 439, top: 47, position: 'absolute', color: 'white', fontSize: 16, fontFamily: 'Inter', fontStyle: 'italic', fontWeight: '900', wordWrap: 'break-word'}}>🇺🇸 United States</div>
-              <div style={{left: 439, top: 73, position: 'absolute', color: 'white', fontSize: 16, fontFamily: 'Inter', fontStyle: 'italic', fontWeight: '900', wordWrap: 'break-word'}}>🇻🇳 Viet Nam</div>
-              <div style={{left: 439, top: 99, position: 'absolute', color: 'white', fontSize: 16, fontFamily: 'Inter', fontStyle: 'italic', fontWeight: '900', wordWrap: 'break-word'}}>🌎 Others</div>
-              <div style={{left: 625, top: 21, position: 'absolute', color: 'white', fontSize: 16, fontFamily: 'Inter', fontStyle: 'italic', fontWeight: '900', wordWrap: 'break-word'}}>Company</div>
-              <div style={{left: 625, top: 47, position: 'absolute', color: 'white', fontSize: 16, fontFamily: 'Inter', fontStyle: 'italic', fontWeight: '900', wordWrap: 'break-word'}}>Contact</div>
-              <div style={{left: 625, top: 73, position: 'absolute', color: 'white', fontSize: 16, fontFamily: 'Inter', fontStyle: 'italic', fontWeight: '900', wordWrap: 'break-word'}}>Blog</div>
-              <div style={{left: 821, top: 21, position: 'absolute', color: 'white', fontSize: 16, fontFamily: 'Inter', fontStyle: 'italic', fontWeight: '900', wordWrap: 'break-word'}}>Follow Us</div>
-              <img style={{width: 162, height: 175, left: 0, top: 0, position: 'absolute'}} src="https://via.placeholder.com/162x175" />
-              <div style={{width: 1920, height: 175, left: 0, top: 0, position: 'absolute', background: 'black'}}>
-                <div style={{left: 920, top: 20, position: 'absolute', color: 'white', fontSize: 16, fontFamily: 'Inter', fontStyle: 'italic', fontWeight: '900', wordWrap: 'break-word'}}>Resources<br/><br/>Database<br/><br/>Exercises Calculator</div>
-                <div style={{width: 128, left: 1217, top: 18, position: 'absolute', color: 'white', fontSize: 16, fontFamily: 'Inter', fontStyle: 'italic', fontWeight: '900', wordWrap: 'break-word'}}>Country<br/><br/>🇺🇸 United States<br/><br/>🇻🇳 Viet Nam<br/><br/>🌎 Others</div>
-                <div style={{left: 1476, top: 17, position: 'absolute', color: 'white', fontSize: 16, fontFamily: 'Inter', fontStyle: 'italic', fontWeight: '900', wordWrap: 'break-word'}}>Company<br/><br/>Contract<br/><br/>Blog</div>
-                <div style={{left: 1684, top: 16, position: 'absolute', color: 'white', fontSize: 16, fontFamily: 'Inter', fontStyle: 'italic', fontWeight: '900', wordWrap: 'break-word'}}>Follow Us</div>
-                <img style={{width: 162, height: 175, left: 0, top: 0, position: 'absolute'}} src="https://via.placeholder.com/162x175" />
-              </div>
-            </div>
             <div style={{width: 92, height: 40, left: 753, top: 679, position: 'absolute', background: '#FBB605', borderRadius: 8}} />
             <div style={{width: 92, height: 40, left: 753, top: 1028, position: 'absolute', background: '#D9D9D9', borderRadius: 8}} />
             <div style={{width: 92, height: 40, left: 753, top: 2118, position: 'absolute', background: '#D9D9D9', borderRadius: 8}} />
@@ -115,7 +88,6 @@ class Food extends React.Component {
             <div style={{width: 92, height: 40, left: 1125, top: 2118, position: 'absolute', background: '#D9D9D9', borderRadius: 8}} />
             <div style={{width: 92, height: 40, left: 1125, top: 1414, position: 'absolute', background: '#D9D9D9', borderRadius: 8}} />
             <div style={{width: 92, height: 40, left: 1126, top: 1766, position: 'absolute', background: '#D9D9D9', borderRadius: 8}} />
-            <div style={{left: 15.50, top: 5.50, position: 'absolute', textAlign: 'center', color: '#1D1B20', fontSize: 14, fontFamily: 'Roboto', fontWeight: '500', lineHeight: 20, letterSpacing: 0.10, wordWrap: 'break-word'}}>Chicken</div>
             <div style={{left: 773, top: 689, position: 'absolute', textAlign: 'center', color: '#1D1B20', fontSize: 14, fontFamily: 'Roboto', fontWeight: '500', lineHeight: 20, letterSpacing: 0.10, wordWrap: 'break-word'}}>Chicken</div>
             <div style={{width: 51, left: 773, top: 1038, position: 'absolute', textAlign: 'center', color: '#1D1B20', fontSize: 14, fontFamily: 'Roboto', fontWeight: '500', lineHeight: 20, letterSpacing: 0.10, wordWrap: 'break-word'}}>Rice</div>
             <div style={{width: 51, left: 773, top: 2128, position: 'absolute', textAlign: 'center', color: '#1D1B20', fontSize: 14, fontFamily: 'Roboto', fontWeight: '500', lineHeight: 20, letterSpacing: 0.10, wordWrap: 'break-word'}}>Banana</div>
@@ -170,8 +142,11 @@ class Food extends React.Component {
             <div style={{width: 82, left: 1130, top: 2128, position: 'absolute', textAlign: 'center', color: '#1D1B20', fontSize: 14, fontFamily: 'Roboto', fontWeight: '500', lineHeight: 20, letterSpacing: 0.10, wordWrap: 'break-word'}}>Blueberries</div>
             <div style={{width: 70, left: 1136, top: 1424, position: 'absolute', textAlign: 'center', color: '#1D1B20', fontSize: 14, fontFamily: 'Roboto', fontWeight: '500', lineHeight: 20, letterSpacing: 0.10, wordWrap: 'break-word'}}>Walnuts</div>
             <div style={{width: 70, left: 1137, top: 1776, position: 'absolute', textAlign: 'center', color: '#1D1B20', fontSize: 14, fontFamily: 'Roboto', fontWeight: '500', lineHeight: 20, letterSpacing: 0.10, wordWrap: 'break-word'}}>Soy Milk</div>
-          </div>
           
+            <Footer/>
+            </div>
+          
+
         );
     }
 }
