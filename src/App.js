@@ -11,6 +11,7 @@ import ActivityLevel from './Component/ActivityLevel/ActivityLevel';
 import Food from './Component/Food/Food';
 import LoseFat from './Component/LoseFat/LoseFat';
 import NextCreate from './Component/NextCreate/NextCreate';
+import Plan from './Component/Plan/Plan';
 function App() {
   return (
     <Router>
@@ -22,9 +23,10 @@ function App() {
         <Route path="/activityLevel" element={<div className="app-container"><ActivityLevel /></div>} />
         <Route path="/food" element={<div className="app-container"><Food /></div>} />
         <Route path="/losefat" element={<div className="app-container"><LoseFat /></div>} />
-        <Route path="/nextcreate" element={<div className="app-container"><NextCreate /></div>} />
+        <Route path="/nextCreate" element={<div className="app-container"><NextCreate /></div>} />
         <Route path="/signup" element={<div className="app-container"><Signup /></div>} />
         <Route path="/login" element={<div className="app-container"><Login /></div>} />
+
       </Routes>
     </Router>
 
