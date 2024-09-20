@@ -1,39 +1,91 @@
-//Buoc 5
 import React from "react";
 import "./LoseFat.css";
 import Navbar from "../Navbar/Navbar";
+import { Link } from 'react-router-dom';
 
 class LoseFat extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            selectedOption: "Recommended",
+            targetWeight: ""
+        };
+    }
+
+    handleOptionChange = (event) => {
+        this.setState({ selectedOption: event.target.value });
+    }
+
+    handleWeightChange = (event) => {
+        this.setState({ targetWeight: event.target.value });
+    }
+
     render() {
         return (
-            <div className="lose-fat-container">
+            <div className="lose-fat-wrapper">
                 <Navbar />
-                <div className="progress-bar">
-                    <div className="progress-segment"></div>
-                    <div className="progress-segment"></div>
-                    <div className="progress-segment"></div>
-                    <div className="progress-segment"></div>
-                    <div className="progress-segment active"></div>
-                </div>
-                <div className="back-button">Back</div>
-                <h2 className="target-weight-title">Target weight</h2>
-                <div className="info-box">
-                    <img src="https://via.placeholder.com/100x100" alt="weight icon" />
-                </div>
-                <div className="info-box recommended">
-                    <img src="https://via.placeholder.com/100x100" alt="recommended icon" />
-                    <div className="recommended-text">Recommended</div>
-                    <img src="https://via.placeholder.com/40x40" alt="check icon" />
-                </div>
-                <div className="continue-button">Continue</div>
-                <div className="description">
-                    (it should be less than your current weight because you have selected the “lose fat” option).
-                    <br /> According to the BMI scale, your normal weight range would be between 57 to 77 kg.
-                </div>
-                <div className="benefits">
-                    ✔️ Optimal muscle mass and weight gain
-                    <br /> ✔️ Visible results in the short term
-                    <br /> ✔️ Sustainable diet
+                <div className="lose-fat-container">
+                    <h2 className="target-weight-title">Target weight</h2>
+                    <div className="info-box">
+                        <input
+                            type="text"
+                            value={this.state.targetWeight}
+                            onChange={this.handleWeightChange}
+                            placeholder="Enter target weight in kg"
+                            className="weight-input"
+                        />
+                    </div>
+
+                    <div className="description">
+                        (It should be less than your current weight because you have selected the “lose fat” option).
+                        <br /> According to the BMI scale, your normal weight range would be between 57 to 77 kg.
+                    </div>
+                    
+                    <h2 className="desired-time-title">Desired Time</h2>
+                    {/* Selection Box for Weight Loss Options */}
+                    <div className="time-selection-box">
+                        <label>
+                            <input
+                                type="radio"
+                                value="Recommended"
+                                checked={this.state.selectedOption === "Recommended"}
+                                onChange={this.handleOptionChange}
+                            />
+                            Recommended
+                        </label>
+                        <label>
+                            <input
+                                type="radio"
+                                value="Slow"
+                                checked={this.state.selectedOption === "Slow"}
+                                onChange={this.handleOptionChange}
+                            />
+                            Slow
+                        </label>
+                        <label>
+                            <input
+                                type="radio"
+                                value="Fast"
+                                checked={this.state.selectedOption === "Fast"}
+                                onChange={this.handleOptionChange}
+                            />
+                            Fast
+                        </label>
+                    </div>
+
+                    <div className="benefits">
+                        ✔️ Optimal muscle mass and weight gain
+                        <br /> ✔️ Visible results in the short term
+                        <br /> ✔️ Sustainable diet
+                    </div>
+
+                    <div className="back-button">
+                        <Link to="/food">Back</Link>
+                    </div>
+
+                    <div className="continue-button">
+                        <Link to="/nextcreate">Continue</Link>
+                    </div>
                 </div>
             </div>
         );
