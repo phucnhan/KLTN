@@ -79,13 +79,13 @@ class LoseFat extends React.Component {
                         <br /> ✔️ Sustainable diet
                     </div>
 
-                    <div className="back-button">
+                    <button className="back-button">
                         <Link to="/food">Back</Link>
-                    </div>
+                    </button>
 
-                    <div className="continue-button">
+                    <button className="continue-button">
                         <Link to="/nextcreate">Continue</Link>
-                    </div>
+                    </button>
                 </div>
             </div>
         );

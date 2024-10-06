@@ -11,7 +11,7 @@ class NextCreate extends React.Component {
                 <Navbar />
 
                 <div className="nextcreatetextbox">
-                    <h1 classname="nextcreateGoals">Create your account to ...</h1>
+                    <h1 classname="nextcreateGoals">Create your plan to ...</h1>
                 </div>
 
 
