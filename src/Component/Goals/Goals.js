@@ -1,7 +1,6 @@
 import React from "react";
 import "./Goals.css"; // External CSS
 import Navbar from "../Navbar/Navbar";
-import Footer from "../Footer/Footer";
 import { Link } from 'react-router-dom';
 
 class Goals extends React.Component {
