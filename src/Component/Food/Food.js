@@ -6,11 +6,11 @@ import { Link } from "react-router-dom";
 const Food = () => {
   // State to track selected food preferences
   const [selectedFoods, setSelectedFoods] = useState({
-    proteins: [],
-    carbs: [],
-    fats: [],
-    fruits: [],
-    dairy: [],
+    Proteins: [],
+    Carbs: [],
+    Fats: [],
+    Fruits: [],
+    Dairy: [],
   });
 
   // Handle checkbox change
@@ -78,7 +78,7 @@ const Food = () => {
 
         <div className="title">Your eating preferences</div>
         <form oncontinue={handlecontinue}>
-          {renderFoodItems("proteins", [
+          {renderFoodItems("Proteins", [
             "Chicken",
             "Beef",
             "Fish",
@@ -88,7 +88,7 @@ const Food = () => {
             "Seitan",
             "Protein Powder",
           ])}
-          {renderFoodItems("carbs", [
+          {renderFoodItems("Carbs", [
             "Rice",
             "Potato",
             "Sweet Potato",
@@ -98,14 +98,14 @@ const Food = () => {
             "Corn",
             "Oats",
           ])}
-          {renderFoodItems("fats", [
+          {renderFoodItems("Fats", [
             "Avocado",
             "Peanuts",
             "Almonds",
             "Chocolate",
             "Chia",
           ])}
-          {renderFoodItems("fruits", [
+          {renderFoodItems("Fruits", [
             "Banana",
             "Strawberries",
             "Apple",
@@ -115,7 +115,7 @@ const Food = () => {
             "Grenadia",
             "Dragon Fruit",
           ])}
-          {renderFoodItems("dairy", [
+          {renderFoodItems("Dairy", [
             "Milk",
             "Yogurt",
             "White Cheese",
