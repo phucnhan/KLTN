@@ -46,9 +46,11 @@ class Goals extends React.Component {
                         </Link>
                     </div>
                 </div>
-                <Link to="/firstinfor">
-                <div className="backText">Back</div>
-                </Link>
+                <div className="back-button-container">
+                <button className="back-button">
+                    <Link to="/activityLevel">Back</Link>
+                </button>
+                </div>
             </div>
         );
     }

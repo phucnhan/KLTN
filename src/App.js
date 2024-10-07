@@ -9,7 +9,7 @@ import FisrtInfor from './Component/FisrtInfor/FisrtInfor';
 import Goals from './Component/Goals/Goals';
 import ActivityLevel from './Component/ActivityLevel/ActivityLevel';
 import Food from './Component/Food/Food';
-import LoseFat from './Component/LoseFat/LoseFat';
+import TargetWeight from './Component/TargetWeight/TargetWeight';
 import NextCreate from './Component/NextCreate/NextCreate';
 import Plan from './Component/Plan/Plan';
 function App() {
@@ -22,7 +22,7 @@ function App() {
         <Route path="/goals" element={<div className="app-container"><Goals /></div>} />
         <Route path="/activityLevel" element={<div className="app-container"><ActivityLevel /></div>} />
         <Route path="/food" element={<div className="app-container"><Food /></div>} />
-        <Route path="/losefat" element={<div className="app-container"><LoseFat /></div>} />
+        <Route path="/targetweight" element={<div className="app-container"><TargetWeight /></div>} />
         <Route path="/nextCreate" element={<div className="app-container"><NextCreate /></div>} />
         <Route path="/signup" element={<div className="app-container"><Signup /></div>} />
         <Route path="/login" element={<div className="app-container"><Login /></div>} />

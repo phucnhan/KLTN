@@ -95,13 +95,13 @@
 }
 
 
-/* Submit Button Styling */
-.submit-button-container {
+/* continue Button Styling */
+.continue-button-container {
   display: flex;
   justify-content: center;
 }
 
-.submit-button {
+.continue-button {
   width: 100%;
   max-width: 200px;
   padding: 1rem;
@@ -115,6 +115,6 @@
   margin-top: 1vh;
 }
 
-.submit-button:hover {
+.continue-button:hover {
   background-color: #0056b3;
 }

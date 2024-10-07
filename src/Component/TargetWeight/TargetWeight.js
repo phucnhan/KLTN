@@ -1,9 +1,9 @@
 import React from "react";
-import "./LoseFat.css";
+import "./TargetWeight.css";
 import Navbar from "../Navbar/Navbar";
 import { Link } from 'react-router-dom';
 
-class LoseFat extends React.Component {
+class TargetWeight extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -22,9 +22,9 @@ class LoseFat extends React.Component {
 
     render() {
         return (
-            <div className="lose-fat-wrapper">
+            <div className="target-weight-wrapper">
                 <Navbar />
-                <div className="lose-fat-container">
+                <div className="target-weight-container">
                     <h2 className="target-weight-title">Target weight</h2>
                     <div className="info-box">
                         <input
@@ -92,4 +92,4 @@ class LoseFat extends React.Component {
     }
 }
 
-export default LoseFat;
+export default TargetWeight;

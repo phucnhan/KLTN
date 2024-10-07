@@ -30,10 +30,10 @@ const Food = () => {
   };
 
   // Handle form submission
-  const handleSubmit = (e) => {
+  const handlecontinue = (e) => {
     e.preventDefault();
     console.log("Selected Foods: ", selectedFoods);
-    // Perform further actions like submitting the form to a server
+    // Perform further actions like continueting the form to a server
   };
 
   const renderFoodItems = (category, items) => (
@@ -77,7 +77,7 @@ const Food = () => {
 
 
         <div className="title">Your eating preferences</div>
-        <form onSubmit={handleSubmit}>
+        <form oncontinue={handlecontinue}>
           {renderFoodItems("proteins", [
             "Chicken",
             "Beef",
@@ -127,9 +127,9 @@ const Food = () => {
               <Link to="/activityLevel">Back</Link>
           </button>
           </div>
-          <div className="submit-button-container">
-            <button type="submit" className="submit-button">
-              <Link to="/losefat">Continue</Link>            
+          <div className="continue-button-container">
+            <button className="continue-button">
+              <Link to="/targetweight">Continue</Link>            
             </button>
           </div>
         </form>
