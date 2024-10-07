@@ -17,7 +17,7 @@ class Goals extends React.Component {
                     <div className="goalContent">
                         <Link to="/activityLevel">
                             <div className="goalText loseFatText">Lose Fat</div>
-                            <div className="descriptionText loseFatDescription">Effective weight loss, shine with confidence.</div>
+                            <div className="descriptionGoalText loseFatDescription">Effective weight loss, shine with confidence.</div>
                             <img className="goals-icon" src="image/goalsimg/losefat1.png" alt="Lose Fat icon" />
                         </Link>
                     </div>
@@ -29,7 +29,7 @@ class Goals extends React.Component {
                     <div className="goalContent">
                         <Link to="/activityLevel">
                             <div className="goalText maintainWeightText">Maintain weight</div>
-                            <div className="descriptionText maintainWeightDescription">Firm body, clear lines.</div>
+                            <div className="descriptionGoalText maintainWeightDescription">Firm body, clear lines.</div>
                             <img className="goals-icon" src="image/goalsimg/maintainw1.png" alt="Maintain Weight icon" />
                         </Link>
                     </div>
@@ -41,7 +41,7 @@ class Goals extends React.Component {
                     <div className="goalContent">
                         <Link to="/activityLevel">
                             <div className="goalText muscleGainText">Muscle gain</div>
-                            <div className="descriptionText muscleGainDescription">Keep slim, full of energy.</div>
+                            <div className="descriptionGoalText muscleGainDescription">Keep slim, full of energy.</div>
                             <img className="goals-icon" src="image/goalsimg/musclegain1.png" alt="Muscle Gain icon" />
                         </Link>
                     </div>

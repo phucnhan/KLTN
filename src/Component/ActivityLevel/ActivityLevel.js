@@ -16,7 +16,7 @@ class ActivityLevel extends React.Component {
                     <div className="activityLevelContent">
                         <Link to="/food">
                             <h3 className="activityLevelText SedentaryText">Sedentary</h3>
-                            <div className="descriptionText SedentaryDescription">No or little exercise.</div>
+                            <div className="descriptionALText SedentaryDescription">No or little exercise.</div>
                         </Link>
                     </div>
                 </div>
@@ -25,7 +25,7 @@ class ActivityLevel extends React.Component {
                     <div className="activityLevelContent">
                         <Link to="/food">
                             <h3 className="activityLevelText LightText">Light</h3>
-                            <div className="descriptionText LightDescription">Exercise 2-3 days per week.</div>
+                            <div className="descriptionALText LightDescription">Exercise 2-3 days per week.</div>
                         </Link>
                     </div>
                 </div>
@@ -34,7 +34,7 @@ class ActivityLevel extends React.Component {
                     <div className="activityLevelContent">
                         <Link to="/food">
                             <h3 className="activityLevelText ModerateText">Moderate</h3>
-                            <div className="descriptionText ModerateDescription">Exercise 4-5 days per week.</div>
+                            <div className="descriptionALText ModerateDescription">Exercise 4-5 days per week.</div>
                         </Link>
                     </div>
                 </div>
@@ -44,7 +44,7 @@ class ActivityLevel extends React.Component {
                     <div className="activityLevelContent">
                         <Link to="/food">
                             <h3 className="activityLevelText HighText">High</h3>
-                            <div className="descriptionText HighDescription">Exercise 6-7 days per week.</div>
+                            <div className="descriptionALText HighDescription">Exercise 6-7 days per week.</div>
                         </Link>
                     </div>
                 </div>
@@ -53,7 +53,7 @@ class ActivityLevel extends React.Component {
                     <div className="activityLevelContent">
                         <Link to="/food">
                             <h3 className="activityLevelText AthleteText">Athlete</h3>
-                            <div className="descriptionText AthleteDescription">Intense exercise 6-7 days per week.</div>
+                            <div className="descriptionALText AthleteDescription">Intense exercise 6-7 days per week.</div>
                         </Link>
                     </div>
                 </div>
