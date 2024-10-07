@@ -26,6 +26,7 @@ function App() {
         <Route path="/nextCreate" element={<div className="app-container"><NextCreate /></div>} />
         <Route path="/signup" element={<div className="app-container"><Signup /></div>} />
         <Route path="/login" element={<div className="app-container"><Login /></div>} />
+        <Route path="/plan" element={<div className="app-container"><Plan /></div>} />
 
       </Routes>
     </Router>
