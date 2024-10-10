@@ -1,7 +1,7 @@
 
 import Home from './Component/Home/Home';
 import Signup from './Component/Signup/Signup';
-
+import React, { useEffect } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Login from './Component/Login/Login';
@@ -12,6 +12,9 @@ import Food from './Component/Food/Food';
 import TargetWeight from './Component/TargetWeight/TargetWeight';
 import NextCreate from './Component/NextCreate/NextCreate';
 import Plan from './Component/Plan/Plan';
+
+
+
 function App() {
   return (
     <Router>
