@@ -1,0 +1,65 @@
+/* src/AboutUs.css */
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.about-us-container {
+    width: 100%;
+    padding: 10vh;
+    position: relative;
+    background: white;
+    background-size: cover;
+}
+.about-us {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-us h2 {
+    color: #333;
+    margin-top: 1.5rem;
+}
+
+.about-us p, .about-us ul {
+    margin: 1rem 0;
+}
+
+.about-us ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.about-us ul li {
+    background: #e2e2e2;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    border-radius: 4px;
+}
+
+.about-us ul li strong {
+    color: #333;
+}
+
+#backToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#backToTopBtn:hover {
+    background-color: #555;
+}
