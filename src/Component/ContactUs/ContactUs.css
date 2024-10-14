@@ -1,12 +1,11 @@
 /* src/ContactUs.css */
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
+.contact-us-container {
+    width: 100%;
+    padding: 10vh;
+    position: relative;
+    background: white;
+    background-size: cover;
 }
-
 header {
     background: #333;
     color: #fff;
