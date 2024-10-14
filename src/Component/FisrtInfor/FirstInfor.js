@@ -1,7 +1,6 @@
-import "./FisrtInfor.css";
+import "./FirstInfor.css"; // Import CSS
 import Navbar from "../Navbar/Navbar";
-import React, { useState } from 'react';
-import {useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { auth, db, doc, setDoc } from '../../firebase';
 import { onAuthStateChanged } from "firebase/auth";
@@ -19,7 +18,7 @@ const FirstInfor = () => {
       if (currentUser) {
         setUser(currentUser);
       } else {
-        navigate('/login'); // Chuyển hướng đến trang đăng nhập nếu không đăng nhập
+        navigate('/login'); // Redirect to login if not authenticated
       }
     });
 
@@ -41,9 +40,9 @@ const FirstInfor = () => {
     };
 
     try {
-      await setDoc(doc(db, "users", user.uid, "firstInfor", user.uid), formData);
+      await setDoc(doc(db, "users", user.uid, "firstInfo", user.uid), formData);
       console.log("Document written with ID: ", user.uid);
-      navigate('/goals'); // Chuyển hướng đến trang tiếp theo
+      navigate('/goals'); // Redirect to the next page
     } catch (error) {
       console.error("Error adding document: ", error);
     }
@@ -108,7 +107,7 @@ const FirstInfor = () => {
           </div>
 
           <button type="submit" className="continue-button">
-            Continue
+            Continue 
           </button>
         </form>
       </div>

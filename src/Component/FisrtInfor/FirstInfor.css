@@ -9,8 +9,8 @@
 }
 
 .form-container {
-  width: 90vw; /* Đảm bảo form chiếm tối đa 90% chiều rộng của màn hình */
-  max-width: 600px; /* Giới hạn tối đa chiều rộng của form */
+  width: 90vw; /* Ensure the form takes up to 90% of the screen width */
+  max-width: 600px; /* Limit the maximum width of the form */
   margin: 0 auto;
   display: flex;
   flex-direction: column;

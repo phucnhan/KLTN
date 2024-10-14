@@ -7,7 +7,7 @@ import Home from './Component/Home/Home';
 import Signup from './Component/Signup/Signup';
 import Login from './Component/Login/Login';
 import Logout from "./Component/Logout/Logout";
-import FisrtInfor from './Component/FisrtInfor/FisrtInfor';
+import FisrtInfor from './Component/FisrtInfor/FirstInfor';
 import Goals from './Component/Goals/Goals';
 import ActivityLevel from './Component/ActivityLevel/ActivityLevel';
 import Food from './Component/Food/Food';
