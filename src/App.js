@@ -14,7 +14,8 @@ import Food from './Component/Food/Food';
 import TargetWeight from './Component/TargetWeight/TargetWeight';
 import NextCreate from './Component/NextCreate/NextCreate';
 import Plan from './Component/Plan/Plan';
-import AboutUs from './Component/About/AboutUs';
+import AboutUs from './Component/AboutUs/AboutUs';
+import ContactUs from './Component/ContactUs/ContactUs';
 
 
 
@@ -35,6 +36,7 @@ function App() {
         <Route path="/logout" element={<div className="app-container"><Logout /></div>}  />
         <Route path="/plan" element={<div className="app-container"><Plan /></div>} />
         <Route path="/aboutus" element={<div className="app-container"><AboutUs /></div>} />
+        <Route path="/contact" element={<div className="app-container"><ContactUs /></div>} />
 
       </Routes>
     </Router>
