@@ -1,10 +1,12 @@
 
-import Home from './Component/Home/Home';
-import Signup from './Component/Signup/Signup';
-import React, { useEffect } from 'react';
+
+import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './Component/Home/Home';
+import Signup from './Component/Signup/Signup';
 import Login from './Component/Login/Login';
+import Logout from "./Component/Logout/Logout";
 import FisrtInfor from './Component/FisrtInfor/FisrtInfor';
 import Goals from './Component/Goals/Goals';
 import ActivityLevel from './Component/ActivityLevel/ActivityLevel';
@@ -19,7 +21,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<div className="app-container"><Home /></div>} />
+        <Route path="/" element={<div className="app-container"><Login /></div>} />
         <Route path="/home" element={<div className="app-container"><Home /></div>} />
         <Route path="/firstinfor" element={<div className="app-container"><FisrtInfor /></div>} />
         <Route path="/goals" element={<div className="app-container"><Goals /></div>} />
@@ -29,6 +31,7 @@ function App() {
         <Route path="/nextCreate" element={<div className="app-container"><NextCreate /></div>} />
         <Route path="/signup" element={<div className="app-container"><Signup /></div>} />
         <Route path="/login" element={<div className="app-container"><Login /></div>} />
+        <Route path="/logout" element={<div className="app-container"><Logout /></div>}  />
         <Route path="/plan" element={<div className="app-container"><Plan /></div>} />
 
       </Routes>
