@@ -1,82 +1,71 @@
 .firstinfor-container {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    background: white;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background: white;
 }
 
 .form-container {
-    width: 90vw; /* Đảm bảo form chiếm tối đa 90% chiều rộng của màn hình */
-    max-width: 600px; /* Giới hạn tối đa chiều rộng của form */
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem;
-    box-sizing: border-box;
+  width: 90vw; /* Đảm bảo form chiếm tối đa 90% chiều rộng của màn hình */
+  max-width: 600px; /* Giới hạn tối đa chiều rộng của form */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  box-sizing: border-box;
 }
-  
 
-  .continue-button {
-    width: 100%;
-    max-width: 200px;
-    padding: 1rem;
-    background: #469707;
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: background 0.3s ease;
-  }
+.continue-button {
+  width: 100%;
+  max-width: 200px;
+  padding: 1rem;
+  background: #469707;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
 
-  .continue-button:hover {
-    background-color: #0056b3;
-  }
+.continue-button:hover {
+  background-color: #0056b3;
+}
 
+.form-group {
+  margin-bottom: 20px;
+}
 
+.gender-container {
+  display: flex;
+  justify-content: space-between;
+}
 
-  .form-group {
-    margin-bottom: 20px;
-  }
-  
-  .gender-container {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .gender-container button {
-    width: 48%;
-    padding: 10px;
-    background-color: #eee;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-  }
-  
-  .gender-container button.selected {
-    background-color: #d2a275;
-    color: white;
-    border: none;
-  }
-  
-  input {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
+.gender-container button {
+  width: 48%;
+  padding: 10px;
+  background-color: #eee;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
 
+.gender-container button.selected {
+  background-color: #d2a275;
+  color: white;
+  border: none;
+}
 
-
-  
-  
-
-  
+input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
