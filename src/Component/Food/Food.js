@@ -101,7 +101,7 @@ const Food = () => {
           type="button"
           onClick={() => handleSelectAll(category, items)}
         >
-          Select all
+          {selectedFoods[category].length === items.length ? "Unselect all" : "Select all"}
         </button>
       </div>
     </div>

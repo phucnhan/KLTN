@@ -38,10 +38,9 @@ class TargetWeight extends React.Component {
 
                     <div className="description">
                         (Your target weight should fit into either the “fat loss” or “muscle gain” options.)
-                        <br /> According to the BMI scale, your normal weight range would be between ... to ... kg.
                     </div>
                     
-                    <h2 className="desired-time-title">Desired Time</h2>
+                    <h2 className="session-lenght-title">Session Length</h2>
                     {/* Selection Box for Weight Loss Options */}
                     <div className="time-selection-box">
                         <label>
