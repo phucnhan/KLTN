@@ -176,7 +176,10 @@ const Food = () => {
             "Almond Milk",
           ])}
           <div className="back-button-container">
-            <button className="food-back-button">
+            <button 
+              className="food-back-button" 
+              onClick={(e) => e.preventDefault()}
+            >
               <Link to="/activityLevel">Back</Link>
             </button>
           </div>
