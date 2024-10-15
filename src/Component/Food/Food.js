@@ -51,6 +51,22 @@ const Food = () => {
     e.preventDefault();
     console.log("Selected Foods: ", selectedFoods);
     
+    // Kiểm tra từng danh mục để xem có lựa chọn nào không
+    const categories = Object.keys(selectedFoods);
+    const emptyCategories = []; // Mảng lưu trữ các danh mục không có lựa chọn
+
+    for (const category of categories) {
+        if (selectedFoods[category].length === 0) {
+            emptyCategories.push(category); // Thêm danh mục vào mảng nếu không có lựa chọn
+        }
+    }
+
+    // Nếu có danh mục không có lựa chọn, hiển thị thông báo
+    if (emptyCategories.length > 0) {
+        alert(`Vui lòng chọn ít nhất một thực phẩm trong các phần: ${emptyCategories.join(", ")}.`);
+        return; // Dừng lại nếu không có lựa chọn
+    }
+    
     // Lưu trữ lựa chọn của người dùng lên Firebase
     const userId = auth.currentUser.uid; // Lấy ID người dùng hiện tại
     const userDocRef = doc(db, "userSelections", userId); // Tạo tham chiếu đến tài liệu của người dùng
@@ -165,8 +181,8 @@ const Food = () => {
             </button>
           </div>
           <div className="continue-button-container">
-            <button className="continue-button">
-              <Link to="/targetweight">Continue</Link>
+            <button className="continue-button" onClick={handleContinue}>
+              Continue
             </button>
           </div>
         </form>
