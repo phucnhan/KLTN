@@ -54,7 +54,7 @@ const Goals = () => {
             </div>
 
             {/* Maintain Weight Goal */}
-            <div className="goalItem" onClick={() => handleGoalSelection('maintainWeight')}>
+            <div className="goalItemMW" onClick={() => handleGoalSelection('maintainWeight')}>
                 <div className="goalBox maintainWeight"></div>
                 <div className="goalContent">
                     <div className="goalText maintainWeightText">Maintain weight</div>
@@ -64,7 +64,7 @@ const Goals = () => {
             </div>
 
             {/* Muscle Gain Goal */}
-            <div className="goalItem" onClick={() => handleGoalSelection('muscleGain')}>
+            <div className="goalItemMG" onClick={() => handleGoalSelection('muscleGain')}>
                 <div className="goalBox muscleGain"></div>
                 <div className="goalContent">
                     <div className="goalText muscleGainText">Muscle gain</div>
