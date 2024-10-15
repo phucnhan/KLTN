@@ -1,9 +1,12 @@
-import React, { useState } from "react";
-import "./Food.css";
+import "./Food.css"; // Import CSS
 import Navbar from "../Navbar/Navbar";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { auth, db, doc, setDoc, getDocs, collection, onAuthStateChanged } from '../../firebase';
 
 const Food = () => {
+  const navigate = useNavigate();
+
   // State to track selected food preferences
   const [selectedFoods, setSelectedFoods] = useState({
     Proteins: [],
@@ -12,6 +15,20 @@ const Food = () => {
     Fruits: [],
     Dairy: [],
   });
+
+  // State to track all foods from Firebase
+  const [foods, setFoods] = useState([]);
+
+  useEffect(() => {
+    const fetchFoods = async () => {
+      const foodCollection = collection(db, "foods");
+      const foodSnapshot = await getDocs(foodCollection);
+      const foodList = foodSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+      setFoods(foodList);
+    };
+
+    fetchFoods();
+  }, []);
 
   // Handle checkbox change
   const handleCheckboxChange = (category, food) => {
@@ -30,10 +47,22 @@ const Food = () => {
   };
 
   // Handle form submission
-  const handlecontinue = (e) => {
+  const handleContinue = async (e) => {
     e.preventDefault();
     console.log("Selected Foods: ", selectedFoods);
-    // Perform further actions like continueting the form to a server
+    
+    // Lưu trữ lựa chọn của người dùng lên Firebase
+    const userId = auth.currentUser.uid; // Lấy ID người dùng hiện tại
+    const userDocRef = doc(db, "userSelections", userId); // Tạo tham chiếu đến tài liệu của người dùng
+
+    try {
+        await setDoc(userDocRef, { selectedFoods }); // Lưu trữ dữ liệu
+        console.log("User selections saved successfully!");
+        // Chuyển hướng đến trang tiếp theo
+        navigate("/targetweight");
+    } catch (error) {
+        console.error("Error saving user selections: ", error);
+    }
   };
 
   const renderFoodItems = (category, items) => (
@@ -70,14 +99,22 @@ const Food = () => {
     }));
   };
 
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      if (!user) {
+        navigate("/signin");
+      }
+    });
+
+    return () => unsubscribe();
+  }, [navigate]);
+
   return (
     <div className="food-page">
       <Navbar />
       <div className="food-form-container">
-
-
         <div className="title">Your eating preferences</div>
-        <form oncontinue={handlecontinue}>
+        <form onSubmit={handleContinue}>
           {renderFoodItems("Proteins", [
             "Chicken",
             "Beef",
@@ -123,13 +160,13 @@ const Food = () => {
             "Almond Milk",
           ])}
           <div className="back-button-container">
-          <button className="food-back-button">
+            <button className="food-back-button">
               <Link to="/activityLevel">Back</Link>
-          </button>
+            </button>
           </div>
           <div className="continue-button-container">
             <button className="continue-button">
-              <Link to="/targetweight">Continue</Link>            
+              <Link to="/targetweight">Continue</Link>
             </button>
           </div>
         </form>
