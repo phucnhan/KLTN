@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./Goals.css"; // External CSS
 import Navbar from "../Navbar/Navbar";
 import { Link, useNavigate } from 'react-router-dom';
-import { auth, db, doc, updateDoc } from '../../firebase';
+import { auth, db, doc, updateDoc, getDoc, setDoc } from '../../firebase';
 import { onAuthStateChanged } from "firebase/auth";
 
 const Goals = () => {
@@ -27,13 +27,24 @@ const Goals = () => {
             return;
         }
 
+        const userDocRef = doc(db, "users", user.uid); // Tạo tham chiếu đến tài liệu của người dùng
+
         try {
-            const userDocRef = doc(db, "users", user.uid);
-            await updateDoc(userDocRef, { goal });
-            console.log("Goal updated: ", goal);
-            navigate('/activityLevel'); // Redirect to the next page
+            // Kiểm tra xem tài liệu có tồn tại không
+            const docSnap = await getDoc(userDocRef);
+            if (docSnap.exists()) {
+                // Nếu tài liệu tồn tại, cập nhật
+                await updateDoc(userDocRef, { goal });
+                console.log("Goal updated: ", goal);
+            } else {
+                // Nếu tài liệu không tồn tại, tạo mới
+                await setDoc(userDocRef, { goal });
+                console.log("Goal created: ", goal);
+            }
+            navigate('/activityLevel'); // Chuyển hướng đến trang tiếp theo
         } catch (error) {
-            console.error("Error updating goal: ", error);
+            console.error("Error updating goal: ", error.message);
+            alert("Có lỗi xảy ra: " + error.message);
         }
     };
 
@@ -44,7 +55,7 @@ const Goals = () => {
                 <h1 className="textGoals">What is your goal?</h1>
             </div>
             {/* Lose Fat Goal */}
-            <div className="goalItemlosefat" onClick={() => handleGoalSelection('loseFat')}>
+            <div className="goalItemlosefat" onClick={() => { console.log("Lose Fat clicked"); handleGoalSelection('loseFat'); }}>
                 <div className="goalBox loseFat"></div>
                 <div className="goalContent">
                     <div className="goalText loseFatText">Lose Fat</div>
