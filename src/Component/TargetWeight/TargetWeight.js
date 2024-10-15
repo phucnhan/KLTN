@@ -1,94 +1,157 @@
-import React from "react";
-import "./TargetWeight.css";
+import React, { useEffect, useState } from "react";
+import "./TargetWeight.css"; // External CSS
 import Navbar from "../Navbar/Navbar";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { auth, db, doc, updateDoc, getDoc, setDoc } from '../../firebase';
+import { onAuthStateChanged } from "firebase/auth";
 
-class TargetWeight extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            selectedOption: "Recommended",
-            targetWeight: ""
-        };
-    }
+const TargetWeight = () => {
+    const [user, setUser] = useState(null);
+    const [selectedOption, setSelectedOption] = useState("Recommended");
+    const [targetWeight, setTargetWeight] = useState("");
+    const [goal, setGoal] = useState("");
+    const navigate = useNavigate();
 
-    handleOptionChange = (event) => {
-        this.setState({ selectedOption: event.target.value });
-    }
+    useEffect(() => {
+        const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+            if (currentUser) {
+                setUser(currentUser);
+                fetchGoalAndTargetWeight(currentUser.uid);
+            } else {
+                navigate('/login'); // Redirect to login if not authenticated
+            }
+        });
 
-    handleWeightChange = (event) => {
-        this.setState({ targetWeight: event.target.value });
-    }
+        return () => unsubscribe();
+    }, [navigate]);
 
-    render() {
-        return (
-            <div className="target-weight-wrapper">
-                <Navbar />
-                <div className="target-weight-container">
-                    <h2 className="target-weight-title">Target weight</h2>
-                    <div className="info-box">
-                        <input
-                            type="text"
-                            value={this.state.targetWeight}
-                            onChange={this.handleWeightChange}
-                            placeholder="Enter target weight in kg"
-                            className="weight-input"
-                        />
-                    </div>
+    const fetchGoalAndTargetWeight = async (uid) => {
+        const userDocRef = doc(db, 'users', uid);
+        const docSnap = await getDoc(userDocRef);
+        if (docSnap.exists()) {
+            const data = docSnap.data();
+            setGoal(data.goal);
+            if (data.goal === 'maintainWeight') {
+                setTargetWeight("Your weight will remain the same.");
+            } else {
+                const targetWeightDoc = doc(db, 'targetWeights', uid);
+                const targetWeightSnap = await getDoc(targetWeightDoc);
+                if (targetWeightSnap.exists()) {
+                    const targetData = targetWeightSnap.data();
+                    setTargetWeight(targetData.targetWeight);
+                    setSelectedOption(targetData.selectedOption);
+                }
+            }
+        }
+    };
 
-                    <div className="description">
-                        (Your target weight should fit into either the “fat loss” or “muscle gain” options.)
-                    </div>
-                    
-                    <h2 className="session-lenght-title">Session Length</h2>
-                    {/* Selection Box for Weight Loss Options */}
-                    <div className="time-selection-box">
-                        <label>
-                            <input
-                                type="radio"
-                                value="Recommended"
-                                checked={this.state.selectedOption === "Recommended"}
-                                onChange={this.handleOptionChange}
-                            />
-                            Recommended
-                        </label>
-                        <label>
-                            <input
-                                type="radio"
-                                value="Slow"
-                                checked={this.state.selectedOption === "Slow"}
-                                onChange={this.handleOptionChange}
-                            />
-                            Slow
-                        </label>
-                        <label>
-                            <input
-                                type="radio"
-                                value="Fast"
-                                checked={this.state.selectedOption === "Fast"}
-                                onChange={this.handleOptionChange}
-                            />
-                            Fast
-                        </label>
-                    </div>
+    const handleOptionChange = (event) => {
+        setSelectedOption(event.target.value);
+    };
 
-                    <div className="benefits">
-                        ✔️ Optimal muscle mass and weight gain
-                        <br /> ✔️ Visible results in the short term
-                        <br /> ✔️ Sustainable diet
-                    </div>
+    const handleWeightChange = (event) => {
+        setTargetWeight(event.target.value);
+    };
 
-                    <button className="back-button">
-                        <Link to="/food">Back</Link>
-                    </button>
+    const handleSave = async () => {
+        if (!user) {
+            alert("User not authenticated");
+            return;
+        }
 
-                    <button className="continue-button">
-                        <Link to="/nextcreate">Continue</Link>
-                    </button>
+        const targetWeightDoc = doc(db, 'users', user.uid);
+
+        try {
+            const docSnap = await getDoc(targetWeightDoc);
+            if (docSnap.exists()) {
+                await updateDoc(targetWeightDoc, {
+                    targetWeight: parseFloat(targetWeight),
+                    selectedOption
+                });
+                console.log("Target weight updated!");
+            } else {
+                await setDoc(targetWeightDoc, {
+                    targetWeight: parseFloat(targetWeight),
+                    selectedOption
+                });
+                console.log("Target weight created!");
+            }
+            navigate('/nextcreate'); // Redirect to the next page
+        } catch (error) {
+            console.error("Error saving target weight: ", error.message);
+            alert("An error occurred: " + error.message);
+        }
+    };
+
+    return (
+        <div className="target-weight-wrapper">
+            <Navbar />
+            <div className="target-weight-container">
+                <h2 className="target-weight-title">Target weight</h2>
+                <div className="info-box">
+                    <input
+                        type="text"
+                        value={targetWeight}
+                        onChange={handleWeightChange}
+                        placeholder="Enter target weight in kg"
+                        className="weight-input"
+                        disabled={goal === 'maintainWeight'}
+                    />
                 </div>
+
+                {goal === 'maintainWeight' && (
+                    <div className="description">
+                        Your weight will remain the same.
+                    </div>
+                )}
+
+                <h2 className="session-lenght-title">Session Length</h2>
+                <div className="time-selection-box">
+                    <label>
+                        <input
+                            type="radio"
+                            value="Recommended"
+                            checked={selectedOption === "Recommended"}
+                            onChange={handleOptionChange}
+                        />
+                        Recommended
+                    </label>
+                    <label>
+                        <input
+                            type="radio"
+                            value="Slow"
+                            checked={selectedOption === "Slow"}
+                            onChange={handleOptionChange}
+                        />
+                        Slow
+                    </label>
+                    <label>
+                        <input
+                            type="radio"
+                            value="Fast"
+                            checked={selectedOption === "Fast"}
+                            onChange={handleOptionChange}
+                        />
+                        Fast
+                    </label>
+                </div>
+
+                <div className="benefits">
+                    ✔️ Optimal muscle mass and weight gain
+                    <br /> ✔️ Visible results in the short term
+                    <br /> ✔️ Sustainable diet
+                </div>
+
+                <button className="back-button">
+                    <Link to="/food">Back</Link>
+                </button>
+
+                <button className="continue-button" onClick={handleSave}>
+                    Continue
+                </button>
             </div>
-        );
-    }
-}
+        </div>
+    );
+};
 
 export default TargetWeight;
