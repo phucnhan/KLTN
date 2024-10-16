@@ -1,8 +1,7 @@
-
-
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { auth, onAuthStateChanged } from './firebase';
 import Home from './Component/Home/Home';
 import Signup from './Component/Signup/Signup';
 import Login from './Component/Login/Login';
@@ -16,12 +15,22 @@ import NextCreate from './Component/NextCreate/NextCreate';
 import Plan from './Component/Plan/Plan';
 import AboutUs from './Component/AboutUs/AboutUs';
 import ContactUs from './Component/ContactUs/ContactUs';
-
-
+import Navbar from './Component/Navbar/Navbar';
 
 function App() {
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+    });
+
+    return () => unsubscribe();
+  }, []);
+
   return (
     <Router>
+      <Navbar user={user} />
       <Routes>
         <Route path="/" element={<div className="app-container"><Login /></div>} />
         <Route path="/home" element={<div className="app-container"><Home /></div>} />
@@ -33,14 +42,12 @@ function App() {
         <Route path="/nextCreate" element={<div className="app-container"><NextCreate /></div>} />
         <Route path="/signup" element={<div className="app-container"><Signup /></div>} />
         <Route path="/login" element={<div className="app-container"><Login /></div>} />
-        <Route path="/logout" element={<div className="app-container"><Logout /></div>}  />
+        <Route path="/logout" element={<div className="app-container"><Logout /></div>} />
         <Route path="/plan" element={<div className="app-container"><Plan /></div>} />
         <Route path="/aboutus" element={<div className="app-container"><AboutUs /></div>} />
         <Route path="/contact" element={<div className="app-container"><ContactUs /></div>} />
-
       </Routes>
     </Router>
-
   );
 }
 

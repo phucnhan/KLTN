@@ -188,14 +188,17 @@ a:-webkit-any-link{
 }
 
 .logout-button {
-    margin-top: 20px;
+    position: absolute; /* Add this line to position the button absolutely */
+    right: 2vw; /* Position it 2vw from the right edge */
+    top: 2vh; /* Position it 2vh from the top edge */
+    margin-top: 10vh; /* Remove the existing margin-top */
     padding: 10px 20px;
     background-color: #f44336;
     color: white;
     border: none;
     cursor: pointer;
     border-radius: 5px;
-    display: block; /* Đảm bảo nút hiển thị dưới dạng block */
+    display: block;
 }
 
 .logout-button:hover {
