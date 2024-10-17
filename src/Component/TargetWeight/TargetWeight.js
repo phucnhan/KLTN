@@ -33,6 +33,7 @@ const TargetWeight = () => {
             setGoal(data.goal);
             if (data.goal === 'maintainWeight') {
                 setTargetWeight(data.weight); // Set to initial weight
+                setSelectedOption(data.selectedOption); // Ensure selected option is also set
             } else {
                 const targetWeightDoc = doc(db, 'targetWeights', uid);
                 const targetWeightSnap = await getDoc(targetWeightDoc);
