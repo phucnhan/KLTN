@@ -77,6 +77,7 @@ const TargetWeight = () => {
             if (goal === 'maintainWeight') {
                 updatedTargetWeight = initialWeight;
                 setTargetWeight(initialWeight); // Update the state to reflect the change
+                setSelectedOption("Recommended"); // Set a default option if needed
             }
 
             // Check if the goal is 'loseFat' and validate the target weight
@@ -97,7 +98,7 @@ const TargetWeight = () => {
                 // Ensure targetWeight is updated in Firebase as a number
                 await updateDoc(targetWeightDoc, {
                     targetWeight: parseFloat(updatedTargetWeight), // Store as number
-                    selectedOption
+                    selectedOption: selectedOption || "Recommended" // Ensure selectedOption is defined
                 });
                 console.log("Target weight updated!");
                 navigate('/nextcreate'); // Redirect to the next page
