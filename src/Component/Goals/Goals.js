@@ -27,7 +27,7 @@ const Goals = () => {
             return;
         }
 
-        const userDocRef = doc(db, "users", user.uid); // Tạo tham chiếu đến tài liệu của người dùng
+        const userDocRef = doc(db, "usersdata", user.uid); // Tạo tham chiếu đến tài liệu của người dùng
 
         try {
             // Kiểm tra xem tài liệu có tồn tại không

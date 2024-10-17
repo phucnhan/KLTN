@@ -28,7 +28,7 @@ const ActivityLevel = () => {
         }
 
         try {
-            const userDocRef = doc(db, "users", user.uid);
+            const userDocRef = doc(db, "usersdata", user.uid);
             await updateDoc(userDocRef, { activityLevel });
             console.log("Activity level updated: ", activityLevel);
             navigate('/food'); // Redirect to the next page

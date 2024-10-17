@@ -26,7 +26,7 @@ const TargetWeight = () => {
     }, [navigate]);
 
     const fetchGoalAndTargetWeight = async (uid) => {
-        const userDocRef = doc(db, 'users', uid);
+        const userDocRef = doc(db, 'usersdata', uid);
         const docSnap = await getDoc(userDocRef);
         if (docSnap.exists()) {
             const data = docSnap.data();
@@ -59,23 +59,14 @@ const TargetWeight = () => {
             return;
         }
 
-        const targetWeightDoc = doc(db, 'users', user.uid);
+        const targetWeightDoc = doc(db, 'usersdata', user.uid);
 
         try {
-            const docSnap = await getDoc(targetWeightDoc);
-            if (docSnap.exists()) {
-                await updateDoc(targetWeightDoc, {
-                    targetWeight: parseFloat(targetWeight),
-                    selectedOption
-                });
-                console.log("Target weight updated!");
-            } else {
-                await setDoc(targetWeightDoc, {
-                    targetWeight: parseFloat(targetWeight),
-                    selectedOption
-                });
-                console.log("Target weight created!");
-            }
+            await updateDoc(targetWeightDoc, {
+                targetWeight: parseFloat(targetWeight),
+                selectedOption
+            });
+            console.log("Target weight updated!");
             navigate('/nextcreate'); // Redirect to the next page
         } catch (error) {
             console.error("Error saving target weight: ", error.message);

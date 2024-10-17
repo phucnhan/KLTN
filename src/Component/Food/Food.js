@@ -69,10 +69,10 @@ const Food = () => {
     
     // Lưu trữ lựa chọn của người dùng lên Firebase
     const userId = auth.currentUser.uid; // Lấy ID người dùng hiện tại
-    const userDocRef = doc(db, "userSelections", userId); // Tạo tham chiếu đến tài liệu của người dùng
+    const usersDocRef = doc(db, "usersdata", userId); // Tạo tham chiếu đến tài liệu của người dùng trong usersdata
 
     try {
-        await setDoc(userDocRef, { selectedFoods }); // Lưu trữ dữ liệu
+        await setDoc(usersDocRef, { selectedFoods }, { merge: true }); // Lưu trữ dữ liệu trong users với merge
         console.log("User selections saved successfully!");
         // Chuyển hướng đến trang tiếp theo
         navigate("/targetweight");

@@ -40,7 +40,7 @@ const FirstInfor = () => {
     };
 
     try {
-      await setDoc(doc(db, "users", user.uid, "firstInfor", user.uid), formData);
+      await setDoc(doc(db, "usersdata", user.uid), formData); // Removed "firstInfor" from the path
       console.log("Document written with ID: ", user.uid);
       navigate('/goals'); // Redirect to the next page
     } catch (error) {
