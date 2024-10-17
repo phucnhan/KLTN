@@ -40,7 +40,16 @@
     color: #333;
 }
 
-.label-username, .label-password, .label-reenter {
+.input-field input[type="email"] {
+    border: 1px solid #ccc; /* Add a border to distinguish email input */
+    border-radius: 5px; /* Slightly rounded corners */
+    padding: 0.5rem; /* Adjust padding for better appearance */
+    font-size: 1rem; /* Ensure consistent font size */
+    color: #333; /* Text color */
+    background-color: #f9f9f9; /* Light background color */
+}
+
+.label-username, .label-password, .label-reenter, .label-email {
     width: 100%;
     text-align: left;
     margin-bottom: 0.5rem;
