@@ -2,7 +2,7 @@ import "./Food.css"; // Import CSS
 import Navbar from "../Navbar/Navbar";
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { auth, db, doc, setDoc, getDocs, collection, onAuthStateChanged } from '../../firebase';
+import { auth, db, doc, setDoc, onAuthStateChanged } from '../../firebase';
 
 const Food = () => {
   const navigate = useNavigate();
@@ -16,19 +16,15 @@ const Food = () => {
     Dairy: [],
   });
 
-  // State to track all foods from Firebase
-  const [foods, setFoods] = useState([]);
+  // Removed setFoods as it is not used elsewhere
+  // const [setFoods] = useState([]);
 
   useEffect(() => {
     const fetchFoods = async () => {
-      const foodCollection = collection(db, "foods");
-      const foodSnapshot = await getDocs(foodCollection);
-      const foodList = foodSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
-      setFoods(foodList);
     };
 
     fetchFoods();
-  }, []);
+  }, []); // No need to include setFoods in the dependency array
 
   // Handle checkbox change
   const handleCheckboxChange = (category, food) => {
