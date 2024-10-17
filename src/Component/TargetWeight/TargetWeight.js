@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./TargetWeight.css"; // External CSS
 import Navbar from "../Navbar/Navbar";
 import { Link, useNavigate } from 'react-router-dom';
-import { auth, db, doc, updateDoc, getDoc, setDoc } from '../../firebase';
+import { auth, db, doc, updateDoc, getDoc } from '../../firebase';
 import { onAuthStateChanged } from "firebase/auth";
 
 const TargetWeight = () => {
