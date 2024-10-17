@@ -7,7 +7,7 @@ import { onAuthStateChanged } from "firebase/auth";
 
 const FirstInfor = () => {
   const [gender, setGender] = useState('');
-  const [dob, setDob] = useState('');
+  const [age, setAge] = useState(''); // Thêm biến trạng thái cho độ tuổi
   const [height, setHeight] = useState('');
   const [weight, setWeight] = useState('');
   const [user, setUser] = useState(null);
@@ -32,9 +32,32 @@ const FirstInfor = () => {
       return;
     }
 
+    // Kiểm tra xem giới tính đã được chọn chưa
+    if (!gender) {
+      alert("Please select your gender.");
+      return;
+    }
+
+    // Kiểm tra điều kiện độ tuổi
+    if (age < 7 || age > 100) {
+      alert("Age must be between 7 and 100.");
+      return;
+    }
+
+    // Thêm điều kiện cho chiều cao và cân nặng
+    if (height < 50 || height > 250) { // Example height condition
+      alert("Height must be between 50 cm and 250 cm.");
+      return;
+    }
+
+    if (weight < 10 || weight > 300) { // Example weight condition
+      alert("Weight must be between 10 kg and 300 kg.");
+      return;
+    }
+
     const formData = {
       gender,
-      dob,
+      age,
       height,
       weight,
     };
@@ -74,16 +97,18 @@ const FirstInfor = () => {
             </div>
           </div>
 
-          {/* Date of Birth */}
+
+          {/* Age */}
           <div className="form-group">
-            <label>Date of Birth</label>
+            <label>Age</label>
             <input
-              type="date"
-              value={dob}
-              onChange={(e) => setDob(e.target.value)}
+              type="number"
+              value={age}
+              onChange={(e) => setAge(e.target.value)}
+              placeholder="Age"
             />
           </div>
-
+          
           {/* Height */}
           <div className="form-group">
             <label>Height (cm)</label>
@@ -105,6 +130,7 @@ const FirstInfor = () => {
               placeholder="KG"
             />
           </div>
+
 
           <button type="submit" className="continue-button">
             Continue
