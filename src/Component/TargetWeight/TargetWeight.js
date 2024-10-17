@@ -32,7 +32,7 @@ const TargetWeight = () => {
             const data = docSnap.data();
             setGoal(data.goal);
             if (data.goal === 'maintainWeight') {
-                setTargetWeight("Your weight will remain the same.");
+                setTargetWeight(data.weight); // Set to initial weight
             } else {
                 const targetWeightDoc = doc(db, 'targetWeights', uid);
                 const targetWeightSnap = await getDoc(targetWeightDoc);
@@ -50,7 +50,12 @@ const TargetWeight = () => {
     };
 
     const handleWeightChange = (event) => {
-        setTargetWeight(event.target.value);
+        const weightValue = parseFloat(event.target.value);
+        if (!isNaN(weightValue)) {
+            setTargetWeight(weightValue);
+        } else {
+            setTargetWeight(""); // Reset if input is not a valid number
+        }
     };
 
     const handleSave = async () => {
@@ -59,18 +64,46 @@ const TargetWeight = () => {
             return;
         }
 
-        const targetWeightDoc = doc(db, 'usersdata', user.uid);
+        // Fetch the initial weight from the user's data
+        const userDocRef = doc(db, 'usersdata', user.uid);
+        const userDocSnap = await getDoc(userDocRef);
+        if (userDocSnap.exists()) {
+            const userData = userDocSnap.data();
+            const initialWeight = userData.weight; // Assuming 'weight' is stored in the user's data
 
-        try {
-            await updateDoc(targetWeightDoc, {
-                targetWeight: parseFloat(targetWeight),
-                selectedOption
-            });
-            console.log("Target weight updated!");
-            navigate('/nextcreate'); // Redirect to the next page
-        } catch (error) {
-            console.error("Error saving target weight: ", error.message);
-            alert("An error occurred: " + error.message);
+            // Automatically set target weight to initial weight if goal is 'maintainWeight'
+            let updatedTargetWeight = targetWeight;
+            if (goal === 'maintainWeight') {
+                updatedTargetWeight = initialWeight;
+                setTargetWeight(initialWeight); // Update the state to reflect the change
+            }
+
+            // Check if the goal is 'loseFat' and validate the target weight
+            if (goal === 'loseFat' && parseFloat(updatedTargetWeight) >= initialWeight) {
+                alert("Target weight must be less than your initial weight for the 'loseFat' goal.");
+                return;
+            }
+
+            // Check if the goal is 'muscleGain' and validate the target weight
+            if (goal === 'muscleGain' && parseFloat(updatedTargetWeight) <= initialWeight) {
+                alert("Target weight must be greater than your initial weight for the 'muscleGain' goal.");
+                return;
+            }
+
+            const targetWeightDoc = doc(db, 'usersdata', user.uid);
+
+            try {
+                // Ensure targetWeight is updated in Firebase as a number
+                await updateDoc(targetWeightDoc, {
+                    targetWeight: parseFloat(updatedTargetWeight), // Store as number
+                    selectedOption
+                });
+                console.log("Target weight updated!");
+                navigate('/nextcreate'); // Redirect to the next page
+            } catch (error) {
+                console.error("Error saving target weight: ", error.message);
+                alert("An error occurred: " + error.message);
+            }
         }
     };
 
@@ -81,7 +114,7 @@ const TargetWeight = () => {
                 <h2 className="target-weight-title">Target weight</h2>
                 <div className="info-box">
                     <input
-                        type="text"
+                        type="number" // Change input type to number
                         value={targetWeight}
                         onChange={handleWeightChange}
                         placeholder="Enter target weight in kg"

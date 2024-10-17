@@ -104,7 +104,7 @@ const FirstInfor = () => {
             <input
               type="number"
               value={age}
-              onChange={(e) => setAge(e.target.value)}
+              onChange={(e) => setAge(Number(e.target.value))} // Parse to number
               placeholder="Age"
             />
           </div>
@@ -115,7 +115,7 @@ const FirstInfor = () => {
             <input
               type="number"
               value={height}
-              onChange={(e) => setHeight(e.target.value)}
+              onChange={(e) => setHeight(Number(e.target.value))} // Parse to number
               placeholder="Cm"
             />
           </div>
@@ -126,7 +126,7 @@ const FirstInfor = () => {
             <input
               type="number"
               value={weight}
-              onChange={(e) => setWeight(e.target.value)}
+              onChange={(e) => setWeight(Number(e.target.value))} // Parse to number
               placeholder="KG"
             />
           </div>
