@@ -126,7 +126,7 @@ const Food = () => {
       <Navbar />
       <div className="food-form-container">
         <div className="title">Your eating preferences</div>
-        <form onSubmit={handleContinue}>
+        <div onSubmit={handleContinue}>
           {renderFoodItems("Proteins", [
             "Chicken",
             "Beef",
@@ -180,11 +180,11 @@ const Food = () => {
             </button>
           </div>
           <div className="continue-button-container">
-            <button className="continue-button" onClick={handleContinue}>
+            <button className="food-continue-button" onClick={handleContinue}>
               Continue
             </button>
           </div>
-        </form>
+        </div>
       </div>
     </div>
   );
