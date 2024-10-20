@@ -1,148 +1,45 @@
-/* plan.css */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-
-
+/* src/Component/Plan/Plan.css */
 .plan-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     padding: 20px;
-    text-align: center;
-
-}
-
-.plantextbox {
-    width: 100%;
-    max-width: 600px;
-    margin-bottom: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin-top: 10vh;
-    border-radius: 10px;
-    padding: 20px;
-}
-
-
-.planGoals {
-    font-size: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  }
+  
+  .plan-container h1 {
     text-align: center;
-}
-
-/* Style for each goal item container */
-.plan1 {
-    width: 100%;
-    max-width: 600px;
-    margin-top: 1vh;
-    margin-bottom: 40px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .plan-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .plan-item {
+    background-color: #fff;
     border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 20px;
-    background-color: #f4f4f4;
-}
-
-.plan {
-    width: 100%;
-    max-width: 600px;
-    margin-bottom: 40px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 20px;
-    background-color: #f4f4f4;
-}
-.planContent {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-
-.descriptionText {
-    font-size: 1rem;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    padding: 15px;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .plan-item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .plan-item h2 {
+    margin-top: 0;
+    color: #007bff;
+  }
+  
+  .plan-item p {
+    margin: 5px 0;
     color: #555;
-    margin-bottom: 10px;
-    font-weight: 700;
-    
-}
-
-.ResultText {
-    font-size: 1rem;
-    color: #555;
-    margin-bottom: 10px;
-    
-}
-
-
-.goals-icon {
-    width: 80px;
-    height: 80px;
-    object-fit: contain;
-    margin-top: 10px;
-}
-
-.receive-button-container {
-    display: flex;
-    justify-content: center;
   }
   
-  .receive-button {
-    width: 100%;
-    max-width: 200px;
-    padding: 1rem;
-    background: #469707;
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: background 0.3s ease;
-    margin-top: 1vh;
-    font-size: 2rem; /* Giảm nhẹ kích thước chữ cho vừa vặn hơn */
-    font-family: 'Inter', sans-serif;
-    font-weight: 900;
-    word-wrap: break-word;
-  }
-  
-  .receive-button:hover {
-    background-color: #0056b3;
-  }
-  
-/* Responsive */
-@media (max-width: 768px) {
-
-    .descriptionText {
-        font-size: 0.9rem;
-    }
-
-    .goalItem {
-        max-width: 100%;
-    }
-
-    .goals-icon {
-        width: 60px;
-        height: 60px;
-    }
-}
-
-@media (max-width: 480px) {
-
-    .descriptionText {
-        font-size: 0.8rem;
-    }
-
-    .goals-icon {
-        width: 50px;
-        height: 50px;
-    }
-
-    .goalItem {
-        width: 100%;
-    }
-}
