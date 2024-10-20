@@ -20,7 +20,7 @@ import axios from 'axios';
 
 function App() {
   const [user, setUser] = useState(null);
-  const [plans, setPlans] = useState([]);
+  const [plan, setPlan] = useState(null);
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
@@ -31,17 +31,19 @@ function App() {
   }, []);
 
   useEffect(() => {
-    async function fetchPlans() {
-      try {
-        const response = await axios.get('/api/nutrition-plans');
-        setPlans(response.data);
-      } catch (error) {
-        console.error('Error fetching nutrition plans:', error);
+    async function fetchPlan() {
+      if (user) {
+        try {
+          const response = await axios.get(`/api/nutrition-plan/${user.uid}`);
+          setPlan(response.data);
+        } catch (error) {
+          console.error('Error fetching nutrition plan:', error);
+        }
       }
     }
 
-    fetchPlans();
-  }, []);
+    fetchPlan();
+  }, [user]);
 
   return (
     <Router>
@@ -58,7 +60,7 @@ function App() {
         <Route path="/signup" element={<div className="app-container"><Signup /></div>} />
         <Route path="/login" element={<div className="app-container"><Login /></div>} />
         <Route path="/logout" element={<div className="app-container"><Logout /></div>} />
-        <Route path="/plan" element={<div className="app-container"><Plan plans={plans} /></div>} />
+        <Route path="/plan" element={<div className="app-container"><Plan plan={plan} /></div>} />
         <Route path="/aboutus" element={<div className="app-container"><AboutUs /></div>} />
         <Route path="/contact" element={<div className="app-container"><ContactUs /></div>} />
       </Routes>
