@@ -1,4 +1,3 @@
-// src/Component/Plan/Plan.js
 import React from 'react';
 import './Plan.css';
 
