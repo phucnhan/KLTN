@@ -8,7 +8,7 @@ class Navbar extends React.Component {
             <div className="navbar-container">
                 <nav className="navbar">
                     <ul className="nav-items">
-                        <li className="nav-link"><a href="http://127.0.0.1:8080/" target="_blank" rel="noopener noreferrer">Fitness Page</a></li>
+                        <li className="nav-link"><a href="http://127.0.0.1:8080/" rel="noopener noreferrer">Fitness Page</a></li>
                         <li className="nav-link">
                             <Link to="/aboutus">About Us</Link>
                         </li>
