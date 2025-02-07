@@ -16,15 +16,9 @@ class Navbar extends React.Component {
                             <Link to="/contact">Contact</Link>
                         </li>
                         <li className="nav-link">
-                            <li className="nav-avatar">
-                                <Link to="/login">
-                                    <img
-                                        className="avatar"
-                                        src="image/avatar.png"
-                                        alt="Avatar"
-                                    />
-                                </Link>
-                            </li>
+                            <Link to="/login">
+                                <img className="avatar" src="image/avatar.png" alt="Avatar" />
+                            </Link>
                         </li>
                     </ul>
                 </nav>

@@ -57,6 +57,8 @@
   margin: 5px; /* Space between items */
   cursor: pointer; /* Pointer cursor for interactivity */
   transition: background 0.3s ease; /* Smooth background change */
+  width: 10rem;
+  text-align: center;
 }
 
 .food-item:hover {
