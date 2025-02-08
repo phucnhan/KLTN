@@ -19,7 +19,7 @@ const Plan = () => {
 
   const fetchNutritionPlans = async (uid) => {
     try {
-        const API_URL = process.env.REACT_APP_BACKEND_URL || "http://160.187.246.139:5001";
+        const API_URL = process.env.REACT_APP_BACKEND_URL || "https://81d3-160-187-246-139.ngrok-free.app";
         const response = await fetch(`${API_URL}/api/user-data/${uid}/nutritionPlans`);
 
         if (!response.ok) {

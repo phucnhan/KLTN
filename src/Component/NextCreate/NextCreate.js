@@ -18,7 +18,7 @@ const NextCreate = () => {
     }
   }, []);
 
-  const BACKEND_URL = process.env.REACT_APP_BACKEND_URL || "http://160.187.246.139:5001";
+  const BACKEND_URL = process.env.REACT_APP_BACKEND_URL || "https://81d3-160-187-246-139.ngrok-free.app";
 
 const handleContinue = async () => {
   if (!uid) {

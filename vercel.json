@@ -2,11 +2,11 @@
     "rewrites": [
       {
         "source": "/api/(.*)",
-        "destination": "https://160.187.246.139:5001/api/$1"
+        "destination": "https://81d3-160-187-246-139.ngrok-free.app/api/$1"
       },
       {
         "source": "/generate-plan",
-        "destination": "https://160.187.246.139:5001/generate-plan"
+        "destination": "https://81d3-160-187-246-139.ngrok-free.app/generate-plan"
       }
     ]
   }
