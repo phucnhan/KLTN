@@ -27,7 +27,7 @@ const NextCreate = () => {
     try {
         console.log("Sending request to backend:", { uid });
 
-        const response = await fetch("http://127.0.0.1:5001/generate-plan", {
+        const response = await fetch("http://10.210.133.226:5001/generate-plan", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

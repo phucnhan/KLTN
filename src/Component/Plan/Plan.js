@@ -19,7 +19,7 @@ const Plan = () => {
 
     const fetchNutritionPlans = async (uid) => {
         try {
-            const response = await fetch(`http://127.0.0.1:5001/api/user-data/${uid}/nutritionPlans`);
+            const response = await fetch(`http://10.210.133.226:5001/api/user-data/${uid}/nutritionPlans`);
             if (!response.ok) {
                 throw new Error(`Error fetching nutrition plans: ${response.status}`);
             }
