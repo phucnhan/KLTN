@@ -23,7 +23,6 @@ function App() {
   const [plan, setPlan] = useState(null);
 
   useEffect(() => {
-    // Set the user when the auth state changes
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
     });
@@ -35,9 +34,8 @@ function App() {
     async function fetchPlan() {
       if (user) {
         try {
-          // Fetch the user's nutrition plan from the backend
           const response = await axios.get(`/api/nutrition-plan/${user.uid}`);
-          setPlan(response.data); // Set the fetched plan
+          setPlan(response.data);
         } catch (error) {
           console.error('Error fetching nutrition plan:', error);
         }
