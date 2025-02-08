@@ -12,13 +12,19 @@ const Login = () => {
 
     const handleLogin = async () => {
         try {
-            await signInWithEmailAndPassword(auth, email, password);
+            const userCredential = await signInWithEmailAndPassword(auth, email, password);
+            const user = userCredential.user;
+    
+            // Lưu UID vào localStorage
+            localStorage.setItem("userUID", user.uid);
+    
             setMessage('User logged in successfully');
             navigate('/home'); // Redirect to homepage
         } catch (error) {
             setMessage('Error logging in: ' + error.message);
         }
     };
+    
 
     return (
         <div className="login-container">

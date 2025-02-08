@@ -85,6 +85,10 @@
     cursor: pointer;
 }
 
+.nextcreate-container button{
+    padding: 10px;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
 
