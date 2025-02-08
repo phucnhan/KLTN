@@ -18,39 +18,33 @@ const NextCreate = () => {
     }
   }, []);
 
-  const handleContinue = async () => {
-    if (!uid) {
-        alert("User ID not found! Please log in again.");
-        return;
+  const BACKEND_URL = process.env.REACT_APP_BACKEND_URL || "http://160.187.246.139:5001";
+
+const handleContinue = async () => {
+  if (!uid) {
+    alert("User ID not found! Please log in again.");
+    return;
+  }
+
+  try {
+    const response = await fetch(`${BACKEND_URL}/generate-plan`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ uid }),
+    });
+
+    if (!response.ok) {
+      throw new Error(`Failed to generate plan. Status code: ${response.status}`);
     }
 
-    try {
-        console.log("Sending request to backend:", { uid });
-
-        const response = await fetch("https://160.187.246.139:5001/generate-plan", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-                uid: uid,
-            }),
-        });
-
-        if (!response.ok) {
-            throw new Error(`Failed to generate plan. Status code: ${response.status}`);
-        }
-
-        const data = await response.json();
-        console.log("Plan generated successfully:", data);
-        alert("Plan generated successfully!");
-
-        // Navigate to the plan page
-        navigate("/plan");
-    } catch (error) {
-        console.error("Error generating plan:", error);
-        alert("Error generating plan! Check the console for more details.");
-    }
+    alert("Plan generated successfully!");
+    navigate("/plan");
+  } catch (error) {
+    console.error("Error generating plan:", error);
+    alert("Error generating plan! Check the console for more details.");
+  }
 };
 
   return (

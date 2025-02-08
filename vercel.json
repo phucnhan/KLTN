@@ -1,0 +1,13 @@
+{
+    "rewrites": [
+      {
+        "source": "/api/(.*)",
+        "destination": "https://160.187.246.139:5001/api/$1"
+      },
+      {
+        "source": "/generate-plan",
+        "destination": "https://160.187.246.139:5001/generate-plan"
+      }
+    ]
+  }
+  

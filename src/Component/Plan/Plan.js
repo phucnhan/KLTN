@@ -19,18 +19,21 @@ const Plan = () => {
 
   const fetchNutritionPlans = async (uid) => {
     try {
-      const response = await fetch(`https://160.187.246.139:5001/api/user-data/${uid}/nutritionPlans`);
-      if (!response.ok) {
-        throw new Error(`Error fetching nutrition plans: ${response.status}`);
-      }
+        const API_URL = process.env.REACT_APP_BACKEND_URL || "http://160.187.246.139:5001";
+        const response = await fetch(`${API_URL}/api/user-data/${uid}/nutritionPlans`);
 
-      const data = await response.json();
-      setNutritionPlans(data.plans || []);
+        if (!response.ok) {
+            throw new Error(`Error fetching nutrition plans: ${response.status}`);
+        }
+
+        const data = await response.json();
+        setNutritionPlans(data.plans || []);
     } catch (error) {
-      console.error("Error fetching nutrition plans:", error);
-      alert("Error fetching nutrition plans! Check the console for details.");
+        console.error("Error fetching nutrition plans:", error);
+        alert("Error fetching nutrition plans! Check the console for details.");
     }
-  };
+};
+
 
   const handleToggleDay = (index) => {
     setActiveDay(activeDay === index ? null : index); // Mở/đóng chi tiết của ngày
