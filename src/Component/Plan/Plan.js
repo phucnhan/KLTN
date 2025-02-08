@@ -9,41 +9,38 @@ const Plan = () => {
 
   useEffect(() => {
     const storedUid = localStorage.getItem("userUID");
+    console.log("Stored UID:", storedUid);
     if (storedUid) {
       setUid(storedUid);
-      console.log("UID from localStorage:", storedUid);
       fetchNutritionPlans(storedUid);
     } else {
       alert("User ID not found! Please log in again.");
     }
   }, []);
-
+ 
   const fetchNutritionPlans = async (uid) => {
     try {
       console.log(`Fetching nutrition plans for UID: ${uid}`);
       const response = await fetch(`https://c291-160-187-246-139.ngrok-free.app/api/user-data/${uid}/nutritionPlans`);
-
+  
+      // Log trạng thái và tiêu đề phản hồi
+      console.log("Response status:", response.status);
+      console.log("Response headers:", response.headers);
+  
       if (!response.ok) {
-        const text = await response.text();
-        console.error("Error response text:", text);
+        const errorText = await response.text();
+        console.error("Error response text:", errorText);
         throw new Error(`Error fetching nutrition plans: ${response.status}`);
       }
-
+  
       const contentType = response.headers.get("content-type");
       if (!contentType || !contentType.includes("application/json")) {
-        const text = await response.text();
-        console.error("Non-JSON response:", text);
+        const errorText = await response.text();
+        console.error("Non-JSON response:", errorText);
         throw new Error("Received non-JSON response from API");
       }
-
+  
       const data = await response.json();
-      if (!data.plans || data.plans.length === 0) {
-        console.warn("No nutrition plans found for the given UID.");
-        alert("No nutrition plans found!");
-        setNutritionPlans([]);
-        return;
-      }
-
       console.log("Nutrition plans fetched successfully:", data);
       setNutritionPlans(data.plans || []);
     } catch (error) {
@@ -51,9 +48,7 @@ const Plan = () => {
       alert("Error fetching nutrition plans! Check the console for details.");
     }
   };
-
-
-
+  
   const handleToggleDay = (index) => {
     setActiveDay(activeDay === index ? null : index); // Toggle ngày được chọn
   };
