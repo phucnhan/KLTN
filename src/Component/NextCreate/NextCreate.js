@@ -18,34 +18,40 @@ const NextCreate = () => {
     }
   }, []);
 
-  const BACKEND_URL = process.env.REACT_APP_BACKEND_URL || "https://c291-160-187-246-139.ngrok-free.app";
-
   const handleContinue = async () => {
     if (!uid) {
-      alert("User ID not found! Please log in again.");
-      return;
+        alert("User ID not found! Please log in again.");
+        return;
     }
 
     try {
-      const response = await fetch(`${BACKEND_URL}/generate-plan`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ uid }),
-      });
+        console.log("Sending request to backend:", { uid });
 
-      if (!response.ok) {
-        throw new Error(`Failed to generate plan. Status code: ${response.status}`);
-      }
+        const response = await fetch("https://c291-160-187-246-139.ngrok-free.app/generate-plan", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                uid: uid,
+            }),
+        });
 
-      alert("Plan generated successfully!");
-      navigate("/plan");
+        if (!response.ok) {
+            throw new Error(`Failed to generate plan. Status code: ${response.status}`);
+        }
+
+        const data = await response.json();
+        console.log("Plan generated successfully:", data);
+        alert("Plan generated successfully!");
+
+        // Navigate to the plan page
+        navigate("/plan");
     } catch (error) {
-      console.error("Error generating plan:", error);
-      alert("Error generating plan! Check the console for more details.");
+        console.error("Error generating plan:", error);
+        alert("Error generating plan! Check the console for more details.");
     }
-  };
+};
 
   return (
     <div>
