@@ -18,41 +18,40 @@ const NextCreate = () => {
     }
   }, []);
 
-  // Handle Continue Button Click
   const handleContinue = async () => {
     if (!uid) {
-      alert("User ID not found! Please log in again.");
-      return;
+        alert("User ID not found! Please log in again.");
+        return;
     }
 
     try {
-      console.log("Sending request to backend:", { uid });
+        console.log("Sending request to backend:", { uid });
 
-      const response = await fetch("http://127.0.0.1:5001/generate-plan", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          uid: uid,
-        }),
-      });
+        const response = await fetch("http://127.0.0.1:5001/generate-plan", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                uid: uid,
+            }),
+        });
 
-      if (!response.ok) {
-        throw new Error(`Failed to generate plan. Status code: ${response.status}`);
-      }
+        if (!response.ok) {
+            throw new Error(`Failed to generate plan. Status code: ${response.status}`);
+        }
 
-      const data = await response.json();
-      console.log("Plan generated successfully:", data);
-      alert("Plan generated successfully!");
+        const data = await response.json();
+        console.log("Plan generated successfully:", data);
+        alert("Plan generated successfully!");
 
-      // Navigate to the plan page
-      navigate("/plan");
+        // Navigate to the plan page
+        navigate("/plan");
     } catch (error) {
-      console.error("Error generating plan:", error);
-      alert("Error generating plan! Check the console for more details.");
+        console.error("Error generating plan:", error);
+        alert("Error generating plan! Check the console for more details.");
     }
-  };
+};
 
   return (
     <div>
