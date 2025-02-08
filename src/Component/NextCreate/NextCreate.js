@@ -18,34 +18,34 @@ const NextCreate = () => {
     }
   }, []);
 
-  const BACKEND_URL = process.env.REACT_APP_BACKEND_URL || "https://81d3-160-187-246-139.ngrok-free.app";
+  const BACKEND_URL = process.env.REACT_APP_BACKEND_URL || "https://c291-160-187-246-139.ngrok-free.app";
 
-const handleContinue = async () => {
-  if (!uid) {
-    alert("User ID not found! Please log in again.");
-    return;
-  }
-
-  try {
-    const response = await fetch(`${BACKEND_URL}/generate-plan`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ uid }),
-    });
-
-    if (!response.ok) {
-      throw new Error(`Failed to generate plan. Status code: ${response.status}`);
+  const handleContinue = async () => {
+    if (!uid) {
+      alert("User ID not found! Please log in again.");
+      return;
     }
 
-    alert("Plan generated successfully!");
-    navigate("/plan");
-  } catch (error) {
-    console.error("Error generating plan:", error);
-    alert("Error generating plan! Check the console for more details.");
-  }
-};
+    try {
+      const response = await fetch(`${BACKEND_URL}/generate-plan`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ uid }),
+      });
+
+      if (!response.ok) {
+        throw new Error(`Failed to generate plan. Status code: ${response.status}`);
+      }
+
+      alert("Plan generated successfully!");
+      navigate("/plan");
+    } catch (error) {
+      console.error("Error generating plan:", error);
+      alert("Error generating plan! Check the console for more details.");
+    }
+  };
 
   return (
     <div>

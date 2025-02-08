@@ -19,20 +19,20 @@ const Plan = () => {
 
   const fetchNutritionPlans = async (uid) => {
     try {
-        const API_URL = process.env.REACT_APP_BACKEND_URL || "https://81d3-160-187-246-139.ngrok-free.app";
-        const response = await fetch(`${API_URL}/api/user-data/${uid}/nutritionPlans`);
+      const API_URL = process.env.REACT_APP_BACKEND_URL || "https://c291-160-187-246-139.ngrok-free.app";
+      const response = await fetch(`${API_URL}/api/user-data/${uid}/nutritionPlans`);
 
-        if (!response.ok) {
-            throw new Error(`Error fetching nutrition plans: ${response.status}`);
-        }
+      if (!response.ok) {
+        throw new Error(`Error fetching nutrition plans: ${response.status}`);
+      }
 
-        const data = await response.json();
-        setNutritionPlans(data.plans || []);
+      const data = await response.json();
+      setNutritionPlans(data.plans || []);
     } catch (error) {
-        console.error("Error fetching nutrition plans:", error);
-        alert("Error fetching nutrition plans! Check the console for details.");
+      console.error("Error fetching nutrition plans:", error);
+      alert("Error fetching nutrition plans! Check the console for details.");
     }
-};
+  };
 
 
   const handleToggleDay = (index) => {

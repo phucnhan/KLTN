@@ -1,13 +1,12 @@
 {
     "rewrites": [
-      {
-        "source": "/api/(.*)",
-        "destination": "https://81d3-160-187-246-139.ngrok-free.app/api/$1"
-      },
-      {
-        "source": "/generate-plan",
-        "destination": "https://81d3-160-187-246-139.ngrok-free.app/generate-plan"
-      }
+        {
+            "source": "/api/(.*)",
+            "destination": "https://c291-160-187-246-139.ngrok-free.app/api/$1"
+        },
+        {
+            "source": "/generate-plan",
+            "destination": "https://c291-160-187-246-139.ngrok-free.app/generate-plan"
+        }
     ]
-  }
-  
+}
