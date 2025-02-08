@@ -11,6 +11,7 @@ const Plan = () => {
     const storedUid = localStorage.getItem("userUID");
     if (storedUid) {
       setUid(storedUid);
+      console.log("UID from localStorage:", storedUid);
       fetchNutritionPlans(storedUid);
     } else {
       alert("User ID not found! Please log in again.");
@@ -19,22 +20,25 @@ const Plan = () => {
 
   const fetchNutritionPlans = async (uid) => {
     try {
+      console.log("Fetching nutrition plans for UID:", uid);
+
       const response = await fetch(`https://c291-160-187-246-139.ngrok-free.app/api/user-data/${uid}/nutritionPlans`);
+
       if (!response.ok) {
-        throw new Error(`Error fetching nutrition plans: ${response.status}`);
+        throw new Error(`Error fetching nutrition plans. Status code: ${response.status}`);
       }
 
       const data = await response.json();
+      console.log("Nutrition plans fetched successfully:", data);
       setNutritionPlans(data.plans || []);
     } catch (error) {
       console.error("Error fetching nutrition plans:", error);
-      alert("Error fetching nutrition plans! Check the console for details.");
+      alert("Error fetching nutrition plans! Check the console for more details.");
     }
   };
 
-
   const handleToggleDay = (index) => {
-    setActiveDay(activeDay === index ? null : index); // Mở/đóng chi tiết của ngày
+    setActiveDay(activeDay === index ? null : index); // Toggle ngày được chọn
   };
 
   return (
@@ -50,7 +54,7 @@ const Plan = () => {
             >
               Day {index + 1}
             </div>
-            {activeDay === index && ( // Hiển thị chi tiết chỉ khi ngày được chọn
+            {activeDay === index && (
               <div className="plan-day-details">
                 <p>Calories: {plan.calories}</p>
                 <p>Carbs: {plan.carbs}g</p>
