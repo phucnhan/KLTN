@@ -36,6 +36,66 @@
     word-wrap: break-word;
 }
 
+.homepage-show-plan-button {
+    height: auto;
+    padding: 1vw 2.5vw; /* Điều chỉnh kích thước padding cho phù hợp */
+    position: absolute;
+    left: 50vw;
+    top: 32vw;
+    transform: translateX(-50%);
+    background: #469707;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer; /* Thêm con trỏ chỉ tay */
+    transition: transform 0.3s ease, background 0.3s ease; /* Thêm hiệu ứng khi hover */
+}
+
+.homepage-show-plan-button:hover {
+    transform: translateX(-50%) scale(1.05); /* Phóng to nút khi hover */
+    background: #3a7a05; /* Đổi màu nút khi hover */
+}
+.homepage-show-plan-text {
+    color: white;
+    font-size: 2rem; /* Giảm nhẹ kích thước chữ cho vừa vặn hơn */
+    font-family: 'Inter', sans-serif;
+    font-style: italic;
+    font-weight: 900;
+    word-wrap: break-word;
+}
+.homepage-create-new-plan-text {
+    color: white !important;
+    font-size: 1.5rem; /* Giảm nhẹ kích thước chữ cho vừa vặn hơn */
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    word-wrap: break-word;
+}
+
+.homepage-create-new-plan-button {
+    height: auto;
+    padding: 1vw 2vw; /* Điều chỉnh kích thước padding cho phù hợp */
+    position: absolute;
+    left: 50vw;
+    top: 40vw;
+    transform: translateX(-50%);
+    background: #469707;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer; /* Thêm con trỏ chỉ tay */
+    transition: transform 0.3s ease, background 0.3s ease; /* Thêm hiệu ứng khi hover */
+}
+
+.homepage-create-new-plan-button:hover {
+    transform: translateX(-50%) scale(1.05); /* Phóng to nút khi hover */
+    background: #3a7a05; /* Đổi màu nút khi hover */
+}
+
+
+
+
 .homepage-submit-button {
     width: 10vw; /* Thu nhỏ nút submit */
     height: auto;
@@ -184,7 +244,7 @@
 /*bỏ hiệu ứng người dùng mặc định*/
 a:-webkit-any-link{
     text-decoration: none;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
 }
 
 .logout-button {
