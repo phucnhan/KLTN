@@ -20,46 +20,38 @@ const NextCreate = () => {
 
   const handleContinue = async () => {
     if (!uid) {
-      alert("User ID not found! Please log in again.");
-      return;
+        alert("User ID not found! Please log in again.");
+        return;
     }
-  
+
     try {
-      console.log("Sending request to backend:", { uid });
-  
-      const response = await fetch("https://7d51-160-187-246-139.ngrok-free.app/generate-plan", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ uid }),
-      });
-  
-      console.log("Response status:", response.status);
-  
-      // Kiểm tra phản hồi có phải JSON không
-      const contentType = response.headers.get("content-type");
-      if (!contentType || !contentType.includes("application/json")) {
-        const errorText = await response.text();
-        console.error("Non-JSON response:", errorText);
-        throw new Error("Received non-JSON response from API");
-      }
-  
-      const data = await response.json();
-      console.log("Plan generated successfully:", data);
-  
-      if (!data.success) {
-        throw new Error(data.error || "Plan generation failed.");
-      }
-  
-      alert("Plan generated successfully!");
-      navigate("/plan");
+        console.log("Sending request to backend:", { uid });
+
+        const response = await fetch("http://160.187.246.139:5001/generate-plan", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                uid: uid,
+            }),
+        });
+
+        if (!response.ok) {
+            throw new Error(`Failed to generate plan. Status code: ${response.status}`);
+        }
+
+        const data = await response.json();
+        console.log("Plan generated successfully:", data);
+        alert("Plan generated successfully!");
+
+        // Navigate to the plan page
+        navigate("/plan");
     } catch (error) {
-      console.error("Error generating plan:", error);
-      alert("Error generating plan! Check the console for more details.");
+        console.error("Error generating plan:", error);
+        alert("Error generating plan! Check the console for more details.");
     }
-  };
-  
+};
 
   return (
     <div>
