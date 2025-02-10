@@ -16,7 +16,7 @@
     "webpack": "^4.44.2"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "cross-env PORT=5001 react-scripts start ",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -39,8 +39,8 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://160.187.246.139:5001",
   "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "cross-env": "^7.0.3"
   }
 }
