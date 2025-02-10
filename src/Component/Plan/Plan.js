@@ -21,7 +21,7 @@ const Plan = () => {
   const fetchNutritionPlans = async (uid) => {
     try {
       console.log(`Fetching nutrition plans for UID: ${uid}`);
-      const response = await fetch(`https://c291-160-187-246-139.ngrok-free.app/api/user-data/${uid}/nutritionPlans`);
+      const response = await fetch(`https://3c4e-160-187-246-139.ngrok-free.app/api/user-data/${uid}/nutritionPlans`);
   
       // Log trạng thái và tiêu đề phản hồi
       console.log("Response status:", response.status);
