@@ -27,7 +27,7 @@ const NextCreate = () => {
     try {
         console.log("Sending request to backend:", { uid });
 
-        const response = await fetch("https://3c4e-160-187-246-139.ngrok-free.app/generate-plan", {
+        const response = await fetch("https://623a-160-187-246-139.ngrok-free.app/generate-plan", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
