@@ -39,7 +39,7 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "https://623a-160-187-246-139.ngrok-free.app",
+  "proxy": "https:160.187.246.139:5001",
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
   }
